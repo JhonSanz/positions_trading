@@ -11,4 +11,4 @@ class MoneySerializer(serializers.ModelSerializer):
 class MoneyCreateSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Money
-		fields = ['accountmoney', 'id', 'created_at', 'updated_at', 'currency']
+		fields = ['currency']
