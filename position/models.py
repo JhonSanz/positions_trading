@@ -31,15 +31,20 @@ class Account(AbstractModel):
 class Asset(AbstractModel):
     name = models.CharField(max_length=255)
     presition = models.IntegerField()
-    swap_coeficient = models.CharField(null=True, blank=True, max_length=5)
-    broker = models.ForeignKey(Broker, on_delete=models.PROTECT)
+    swap_coeficient = models.CharField(
+        null=True, blank=True, max_length=7,
+        default="0"*7
+    )
+    long_swap_coeficient = models.FloatField(default=0)
+    short_swap_coeficient = models.FloatField(default=0)
+    account = models.ForeignKey(Account, on_delete=models.PROTECT)
 
     def __str__(self):
-        return f"{self.name} - {self.broker.name}"
+        return f"{self.name} - {self.account.name}"
 
     def get_swap_coeficient(self):
         if self.swap_coeficient:
-            return [day for day in self.swap_coeficient]
+            return [int(day) for day in self.swap_coeficient]
         return None
 
 
