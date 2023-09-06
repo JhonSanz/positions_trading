@@ -1,14 +1,19 @@
 from rest_framework import serializers
-from position.models import Accountmoney
+from position.models import AccountMoney
+from position.serializers.money import MoneySerializer
 
 
-class AccountmoneySerializer(serializers.ModelSerializer):
+class AccountMoneySerializer(serializers.ModelSerializer):
+	money = MoneySerializer()
 	class Meta:
-		model = Accountmoney
-		fields = ['id', 'created_at', 'updated_at', 'quantity', 'account', 'money']
+		model = AccountMoney
+		fields = [
+			'id', 'created_at', 'updated_at', 'quantity',
+			'account', 'money'
+		]
 
 
-class AccountmoneyCreateSerializer(serializers.ModelSerializer):
+class AccountMoneyCreateSerializer(serializers.ModelSerializer):
 	class Meta:
-		model = Accountmoney
-		fields = ['id', 'created_at', 'updated_at', 'quantity', 'account', 'money']
+		model = AccountMoney
+		fields = ['quantity', 'account', 'money']

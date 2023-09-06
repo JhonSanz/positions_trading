@@ -45,7 +45,7 @@ class Asset(AbstractModel):
     def get_swap_coeficient(self):
         if self.swap_coeficient:
             return [int(day) for day in self.swap_coeficient]
-        return None
+        return []
 
 
 class Position(AbstractModel):
@@ -58,7 +58,7 @@ class Position(AbstractModel):
     price = models.FloatField()
     volume = models.FloatField()
     leverage = models.FloatField()
-    order_type = models.CharField(choices=ORDER_TYPES, max_length=10)
+    order_type = models.SmallIntegerField(choices=ORDER_TYPES)
     asset = models.ForeignKey(Asset, on_delete=models.PROTECT)
 
     def __str__(self):
