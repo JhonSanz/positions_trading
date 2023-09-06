@@ -3,6 +3,8 @@ from rest_framework.permissions import IsAuthenticated
 from position.models import Account
 from position.serializers.account import AccountCreateSerializer
 from position.serializers.account import AccountSerializer
+from utils.filter_with_params import FilterManager
+
 
 class AccountViewSet(ModelViewSet):
 	serializer_class = AccountSerializer
@@ -13,3 +15,12 @@ class AccountViewSet(ModelViewSet):
 		if self.action in ["create", "update"]:
 			self.serializer_class = AccountCreateSerializer
 		return self.serializer_class
+
+	def get_queryset(self):
+		if self.action in ["list"]:
+			filters = [
+				{"param": "name", "condition": "name__icontains"},
+			]
+			result = FilterManager(filters, self.request.query_params).generate()
+			self.queryset = self.queryset.filter(*result)
+		return self.queryset
