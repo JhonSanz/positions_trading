@@ -51,7 +51,8 @@ class Creator:
                 "from rest_framework.permissions import IsAuthenticated\n"
                 f"from {self.app}.models import {model_name}\n"
                 f"from {self.app}.serializers.{model_name.lower()} import {model_name}CreateSerializer\n"
-                f"from {self.app}.serializers.{model_name.lower()} import {model_name}Serializer"
+                f"from {self.app}.serializers.{model_name.lower()} import {model_name}Serializer\n"
+                "from utils.filter_with_params import FilterManager\n"
                 "\n""\n"
                 f"class {model_name}ViewSet(ModelViewSet):\n"
                 f"\tserializer_class = {model_name}Serializer\n"
@@ -62,6 +63,14 @@ class Creator:
                 '\t\tif self.action in ["create", "update"]:\n'
                 f"\t\t\tself.serializer_class = {model_name}CreateSerializer\n"
                 "\t\treturn self.serializer_class\n"
+                "\n"
+                "\tdef get_queryset(self):\n"
+                '\t\tif self.action in ["list"]:\n'
+                "\t\t\tfilters = []\n"
+                "\t\t\t# Check FilterManager docstring\n"
+                "\t\t\tresult = FilterManager(filters, self.request.query_params).generate()\n"
+                "\t\t\tself.queryset = self.queryset.filter(*result)\n"
+                "\t\treturn self.queryset"
             )
 
     def run(self):
