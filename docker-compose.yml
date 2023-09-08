@@ -7,9 +7,9 @@ services:
      volumes:
       - postgres_data:/var/lib/postgresql/data/
      environment:
-      - POSTGRES_NAME=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_NAME=inversionesdb
+      - POSTGRES_USER=inversionesdb
+      - POSTGRES_PASSWORD=Hola123...
 
   web:
     build:

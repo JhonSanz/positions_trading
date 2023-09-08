@@ -53,11 +53,12 @@ class Position(AbstractModel):
         (BUY, "Buy"),
         (SELL, "Sell"),
     )
+    reference = models.ForeignKey("self", on_delete=models.PROTECT, null=True, blank=True)    
     open_date = models.DateTimeField()
     close_date = models.DateTimeField(null=True, blank=True)
     price = models.FloatField()
     volume = models.FloatField()
-    leverage = models.FloatField()
+    is_leveraged = models.BooleanField(default=False)
     order_type = models.SmallIntegerField(choices=ORDER_TYPES)
     asset = models.ForeignKey(Asset, on_delete=models.PROTECT)
 
