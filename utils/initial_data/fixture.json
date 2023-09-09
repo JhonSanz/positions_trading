@@ -1,0 +1,332 @@
+[
+    {
+        "fields": {
+            "currency": "USD"
+        },
+        "model": "Money",
+        "pk": "1"
+    },
+    {
+        "fields": {
+            "currency": "COP"
+        },
+        "model": "Money",
+        "pk": "2"
+    },
+    {
+        "fields": {
+            "currency": "AUD"
+        },
+        "model": "Money",
+        "pk": "3"
+    },
+    {
+        "fields": {
+            "currency": "DOT"
+        },
+        "model": "Money",
+        "pk": "4"
+    },
+    {
+        "fields": {
+            "currency": "BTC"
+        },
+        "model": "Money",
+        "pk": "5"
+    },
+    {
+        "fields": {
+            "name": "pepperstone",
+            "website": "https://pepperstone.com"
+        },
+        "model": "Broker",
+        "pk": "1"
+    },
+    {
+        "fields": {
+            "name": "casas",
+            "website": "nan"
+        },
+        "model": "Broker",
+        "pk": "2"
+    },
+    {
+        "fields": {
+            "name": "cripto",
+            "website": "nan"
+        },
+        "model": "Broker",
+        "pk": "3"
+    },
+    {
+        "fields": {
+            "account_type": "nan",
+            "broker": "1",
+            "leverage": "1:100",
+            "name": "Demo-01"
+        },
+        "model": "Account",
+        "pk": "1"
+    },
+    {
+        "fields": {
+            "account_type": "nan",
+            "broker": "1",
+            "leverage": "1:200",
+            "name": "Demo-02"
+        },
+        "model": "Account",
+        "pk": "2"
+    },
+    {
+        "fields": {
+            "account_type": "Corriente",
+            "broker": "2",
+            "leverage": "nan",
+            "name": "Bancolombia 9121556284"
+        },
+        "model": "Account",
+        "pk": "3"
+    },
+    {
+        "fields": {
+            "account_type": "Ahorros",
+            "broker": "2",
+            "leverage": "nan",
+            "name": "Davivienda 8416518351"
+        },
+        "model": "Account",
+        "pk": "4"
+    },
+    {
+        "fields": {
+            "account_type": "wallet",
+            "broker": "3",
+            "leverage": "nan",
+            "name": "electrum"
+        },
+        "model": "Account",
+        "pk": "5"
+    },
+    {
+        "fields": {
+            "account_type": "wallet",
+            "broker": "3",
+            "leverage": "nan",
+            "name": "polkadot.js"
+        },
+        "model": "Account",
+        "pk": "6"
+    },
+    {
+        "fields": {
+            "account_type": "exchange",
+            "broker": "3",
+            "leverage": "nan",
+            "name": "binance"
+        },
+        "model": "Account",
+        "pk": "7"
+    },
+    {
+        "fields": {
+            "account": "1",
+            "long_swap_coeficient": "nan",
+            "name": "QQQ",
+            "presition": "2.0",
+            "short_swap_coeficient": "nan",
+            "swap_coeficient": "nan"
+        },
+        "model": "Asset",
+        "pk": "1"
+    },
+    {
+        "fields": {
+            "account": "1",
+            "long_swap_coeficient": "nan",
+            "name": "XAUUSD",
+            "presition": "2.0",
+            "short_swap_coeficient": "nan",
+            "swap_coeficient": "nan"
+        },
+        "model": "Asset",
+        "pk": "2"
+    },
+    {
+        "fields": {
+            "account": "2",
+            "long_swap_coeficient": "nan",
+            "name": "EURUSD",
+            "presition": "5.0",
+            "short_swap_coeficient": "nan",
+            "swap_coeficient": "nan"
+        },
+        "model": "Asset",
+        "pk": "3"
+    },
+    {
+        "fields": {
+            "account": "3",
+            "long_swap_coeficient": "nan",
+            "name": "casa cachipay",
+            "presition": "nan",
+            "short_swap_coeficient": "nan",
+            "swap_coeficient": "nan"
+        },
+        "model": "Asset",
+        "pk": "4"
+    },
+    {
+        "fields": {
+            "account": "3",
+            "long_swap_coeficient": "nan",
+            "name": "casa el rosal",
+            "presition": "nan",
+            "short_swap_coeficient": "nan",
+            "swap_coeficient": "nan"
+        },
+        "model": "Asset",
+        "pk": "5"
+    },
+    {
+        "fields": {
+            "account": "4",
+            "long_swap_coeficient": "nan",
+            "name": "casa villa verde",
+            "presition": "nan",
+            "short_swap_coeficient": "nan",
+            "swap_coeficient": "nan"
+        },
+        "model": "Asset",
+        "pk": "6"
+    },
+    {
+        "fields": {
+            "account": "5",
+            "long_swap_coeficient": "nan",
+            "name": "BTC",
+            "presition": "nan",
+            "short_swap_coeficient": "nan",
+            "swap_coeficient": "nan"
+        },
+        "model": "Asset",
+        "pk": "7"
+    },
+    {
+        "fields": {
+            "account": "6",
+            "long_swap_coeficient": "nan",
+            "name": "DOT",
+            "presition": "nan",
+            "short_swap_coeficient": "nan",
+            "swap_coeficient": "nan"
+        },
+        "model": "Asset",
+        "pk": "8"
+    },
+    {
+        "fields": {
+            "account": "7",
+            "long_swap_coeficient": "nan",
+            "name": "BTC",
+            "presition": "nan",
+            "short_swap_coeficient": "nan",
+            "swap_coeficient": "nan"
+        },
+        "model": "Asset",
+        "pk": "9"
+    },
+    {
+        "fields": {
+            "account": "7",
+            "long_swap_coeficient": "nan",
+            "name": "DOT",
+            "presition": "nan",
+            "short_swap_coeficient": "nan",
+            "swap_coeficient": "nan"
+        },
+        "model": "Asset",
+        "pk": "10"
+    },
+    {
+        "fields": {
+            "account": "7",
+            "long_swap_coeficient": "nan",
+            "name": "ADA",
+            "presition": "nan",
+            "short_swap_coeficient": "nan",
+            "swap_coeficient": "nan"
+        },
+        "model": "Asset",
+        "pk": "11"
+    },
+    {
+        "fields": {
+            "account": "2",
+            "long_swap_coeficient": "nan",
+            "name": "BTC",
+            "presition": "nan",
+            "short_swap_coeficient": "nan",
+            "swap_coeficient": "nan"
+        },
+        "model": "Asset",
+        "pk": "12"
+    },
+    {
+        "fields": {
+            "account": "1",
+            "long_swap_coeficient": "nan",
+            "name": "COPUSD",
+            "presition": "nan",
+            "short_swap_coeficient": "nan",
+            "swap_coeficient": "nan"
+        },
+        "model": "Asset",
+        "pk": "13"
+    },
+    {
+        "fields": {
+            "asset": "10",
+            "close_date": "2020-12-04",
+            "direction": "in",
+            "is_leveraged": "False",
+            "open_date": "2020-01-01",
+            "order_type": "buy",
+            "price": "5.12",
+            "reference": "nan",
+            "volume": "2"
+        },
+        "model": "Position",
+        "pk": "1"
+    },
+    {
+        "fields": {
+            "asset": "10",
+            "close_date": "2020-08-20",
+            "direction": "out",
+            "is_leveraged": "False",
+            "open_date": "2020-08-20",
+            "order_type": "buy",
+            "price": "6.33",
+            "reference": "1.0",
+            "volume": "1"
+        },
+        "model": "Position",
+        "pk": "2"
+    },
+    {
+        "fields": {
+            "asset": "10",
+            "close_date": "2020-12-04",
+            "direction": "out",
+            "is_leveraged": "False",
+            "open_date": "2020-12-04",
+            "order_type": "buy",
+            "price": "7.11",
+            "reference": "1.0",
+            "volume": "1"
+        },
+        "model": "Position",
+        "pk": "3"
+    }
+]

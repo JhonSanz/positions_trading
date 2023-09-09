@@ -1,6 +1,6 @@
 from django.db import models
 from utils.abstract_model import AbstractModel
-from utils.constant import BUY, SELL
+from utils.constant import PositionsType, DirectionType
 
 
 class Money(AbstractModel):
@@ -50,8 +50,12 @@ class Asset(AbstractModel):
 
 class Position(AbstractModel):
     ORDER_TYPES = (
-        (BUY, "Buy"),
-        (SELL, "Sell"),
+        (PositionsType.LONG, "Long"),
+        (PositionsType.SHORT, "Short"),
+    )
+    DIRECTION_TYPES = (
+        (DirectionType.IN, "In"),
+        (DirectionType.OUT, "Out"),
     )
     reference = models.ForeignKey("self", on_delete=models.PROTECT, null=True, blank=True)    
     open_date = models.DateTimeField()
@@ -60,7 +64,9 @@ class Position(AbstractModel):
     volume = models.FloatField()
     is_leveraged = models.BooleanField(default=False)
     order_type = models.SmallIntegerField(choices=ORDER_TYPES)
+    direction = models.SmallIntegerField(choices=DIRECTION_TYPES, default=DirectionType.IN)
     asset = models.ForeignKey(Asset, on_delete=models.PROTECT)
+    description = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.asset.name} - {self.volume} - {self.price}"

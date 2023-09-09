@@ -7,10 +7,10 @@ from utils.initial_data.read_initial_data import DataReader
 def populate_curr_brokers(apps, schema_editor):
     Money = apps.get_model("position", "Money")
     Broker = apps.get_model("position", "Broker")
-    DataReader([
-        {"file_path": "utils/initial_data/money.csv", "model": Money},
-        {"file_path": "utils/initial_data/broker.csv", "model": Broker},
-    ]).run()
+    # DataReader([
+    #     {"file_path": "utils/initial_data/money.csv", "model": Money},
+    #     {"file_path": "utils/initial_data/broker.csv", "model": Broker},
+    # ]).run()
 
 
 class Migration(migrations.Migration):
