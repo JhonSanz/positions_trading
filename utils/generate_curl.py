@@ -36,7 +36,7 @@ class GenerateCurl:
         serializer_fields = self.get_serializer_fields()
 
         # check if serializer fields are in model fields to
-        # set model types to faker library
+        # set model types to use faker library
         # model = self.get_serializer_model(action)
         # for model_field in model._meta.get_fields():
         #     if model_field.get_attname() in serializer_fields:

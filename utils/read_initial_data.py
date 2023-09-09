@@ -1,15 +1,8 @@
 import pandas as pd
 # from django.db.models import Model
 # from django.apps import apps
+from constant import DataCreator
 import json
-
-import enum
-
-
-class DataCreator(enum.Enum):
-    FIXTURE = 1
-    POPULATE = 2
-
 
 class DataReader:
     def __init__(self, data_file: str, data_definition: list[dict]):
