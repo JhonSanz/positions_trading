@@ -3,35 +3,35 @@
         "fields": {
             "currency": "USD"
         },
-        "model": "Money",
+        "model": "position.money",
         "pk": "1"
     },
     {
         "fields": {
             "currency": "COP"
         },
-        "model": "Money",
+        "model": "position.money",
         "pk": "2"
     },
     {
         "fields": {
             "currency": "AUD"
         },
-        "model": "Money",
+        "model": "position.money",
         "pk": "3"
     },
     {
         "fields": {
             "currency": "DOT"
         },
-        "model": "Money",
+        "model": "position.money",
         "pk": "4"
     },
     {
         "fields": {
             "currency": "BTC"
         },
-        "model": "Money",
+        "model": "position.money",
         "pk": "5"
     },
     {
@@ -39,7 +39,7 @@
             "name": "pepperstone",
             "website": "https://pepperstone.com"
         },
-        "model": "Broker",
+        "model": "position.broker",
         "pk": "1"
     },
     {
@@ -47,7 +47,7 @@
             "name": "casas",
             "website": "nan"
         },
-        "model": "Broker",
+        "model": "position.broker",
         "pk": "2"
     },
     {
@@ -55,7 +55,7 @@
             "name": "cripto",
             "website": "nan"
         },
-        "model": "Broker",
+        "model": "position.broker",
         "pk": "3"
     },
     {
@@ -65,7 +65,7 @@
             "leverage": "1:100",
             "name": "Demo-01"
         },
-        "model": "Account",
+        "model": "position.account",
         "pk": "1"
     },
     {
@@ -75,7 +75,7 @@
             "leverage": "1:200",
             "name": "Demo-02"
         },
-        "model": "Account",
+        "model": "position.account",
         "pk": "2"
     },
     {
@@ -85,7 +85,7 @@
             "leverage": "nan",
             "name": "Bancolombia 9121556284"
         },
-        "model": "Account",
+        "model": "position.account",
         "pk": "3"
     },
     {
@@ -95,7 +95,7 @@
             "leverage": "nan",
             "name": "Davivienda 8416518351"
         },
-        "model": "Account",
+        "model": "position.account",
         "pk": "4"
     },
     {
@@ -105,7 +105,7 @@
             "leverage": "nan",
             "name": "electrum"
         },
-        "model": "Account",
+        "model": "position.account",
         "pk": "5"
     },
     {
@@ -115,7 +115,7 @@
             "leverage": "nan",
             "name": "polkadot.js"
         },
-        "model": "Account",
+        "model": "position.account",
         "pk": "6"
     },
     {
@@ -125,7 +125,7 @@
             "leverage": "nan",
             "name": "binance"
         },
-        "model": "Account",
+        "model": "position.account",
         "pk": "7"
     },
     {
@@ -137,7 +137,7 @@
             "short_swap_coeficient": "nan",
             "swap_coeficient": "nan"
         },
-        "model": "Asset",
+        "model": "position.asset",
         "pk": "1"
     },
     {
@@ -149,7 +149,7 @@
             "short_swap_coeficient": "nan",
             "swap_coeficient": "nan"
         },
-        "model": "Asset",
+        "model": "position.asset",
         "pk": "2"
     },
     {
@@ -161,7 +161,7 @@
             "short_swap_coeficient": "nan",
             "swap_coeficient": "nan"
         },
-        "model": "Asset",
+        "model": "position.asset",
         "pk": "3"
     },
     {
@@ -173,7 +173,7 @@
             "short_swap_coeficient": "nan",
             "swap_coeficient": "nan"
         },
-        "model": "Asset",
+        "model": "position.asset",
         "pk": "4"
     },
     {
@@ -185,7 +185,7 @@
             "short_swap_coeficient": "nan",
             "swap_coeficient": "nan"
         },
-        "model": "Asset",
+        "model": "position.asset",
         "pk": "5"
     },
     {
@@ -197,7 +197,7 @@
             "short_swap_coeficient": "nan",
             "swap_coeficient": "nan"
         },
-        "model": "Asset",
+        "model": "position.asset",
         "pk": "6"
     },
     {
@@ -209,7 +209,7 @@
             "short_swap_coeficient": "nan",
             "swap_coeficient": "nan"
         },
-        "model": "Asset",
+        "model": "position.asset",
         "pk": "7"
     },
     {
@@ -221,7 +221,7 @@
             "short_swap_coeficient": "nan",
             "swap_coeficient": "nan"
         },
-        "model": "Asset",
+        "model": "position.asset",
         "pk": "8"
     },
     {
@@ -233,7 +233,7 @@
             "short_swap_coeficient": "nan",
             "swap_coeficient": "nan"
         },
-        "model": "Asset",
+        "model": "position.asset",
         "pk": "9"
     },
     {
@@ -245,7 +245,7 @@
             "short_swap_coeficient": "nan",
             "swap_coeficient": "nan"
         },
-        "model": "Asset",
+        "model": "position.asset",
         "pk": "10"
     },
     {
@@ -257,7 +257,7 @@
             "short_swap_coeficient": "nan",
             "swap_coeficient": "nan"
         },
-        "model": "Asset",
+        "model": "position.asset",
         "pk": "11"
     },
     {
@@ -269,7 +269,7 @@
             "short_swap_coeficient": "nan",
             "swap_coeficient": "nan"
         },
-        "model": "Asset",
+        "model": "position.asset",
         "pk": "12"
     },
     {
@@ -281,7 +281,7 @@
             "short_swap_coeficient": "nan",
             "swap_coeficient": "nan"
         },
-        "model": "Asset",
+        "model": "position.asset",
         "pk": "13"
     },
     {
@@ -296,7 +296,7 @@
             "reference": "nan",
             "volume": "2"
         },
-        "model": "Position",
+        "model": "position.position",
         "pk": "1"
     },
     {
@@ -311,7 +311,7 @@
             "reference": "1.0",
             "volume": "1"
         },
-        "model": "Position",
+        "model": "position.position",
         "pk": "2"
     },
     {
@@ -326,7 +326,7 @@
             "reference": "1.0",
             "volume": "1"
         },
-        "model": "Position",
+        "model": "position.position",
         "pk": "3"
     }
 ]

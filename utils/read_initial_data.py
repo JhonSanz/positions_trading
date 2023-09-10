@@ -1,13 +1,18 @@
 import pandas as pd
 # from django.db.models import Model
-# from django.apps import apps
-from constant import DataCreator
+from django.apps import apps
+from django.db import transaction
+from .constant import DataCreator
 import json
+import uuid
+import numpy as np
+
 
 class DataReader:
-    def __init__(self, data_file: str, data_definition: list[dict]):
+    def __init__(self, data_file: str, data_definition: list[dict], app: str):
         self.data_file = data_file
         self.data_definition = data_definition
+        self.app = app
         self.data = None
         self.sheet_names = []
         self.sheet_files = {}
@@ -17,8 +22,17 @@ class DataReader:
         return [sheet["sheet_name"] for sheet in self.data_definition]
 
     def generate_data_from_sheet(self):
-        return {sheet: pd.read_excel(self.data, sheet) for sheet in self.sheets_names}
+        all_sheets = {}
+        for sheet in self.sheets_names:
+            df = pd.read_excel(self.data, sheet)
+            if sheet == 'positions':
+                print(df)
+            df["id"] = df["id"].apply(lambda x: uuid.uuid5(
+                uuid.NAMESPACE_DNS, f'{sheet}{x}'))
+            all_sheets[sheet] = df
+        return all_sheets
 
+    @transaction.atomic
     def iterate_over_data(self, mode: int):
         for item in self.data_definition:
             if item["related_fields"]:
@@ -27,32 +41,59 @@ class DataReader:
                         lambda x: x["model"] == related["model"],
                         self.data_definition
                     ))
-                    self.check_related_ids(related_table[0], item, related)
+                    self.check_related_ids(
+                        table1=related_table[0], table2=item,
+                        related=related
+                    )
             if mode == DataCreator.FIXTURE:
                 self.create_fixture(item)
             else:
-                self.populate_database()
+                self.populate_database(item)
 
     def check_related_ids(self, table1: dict, table2: dict, related: dict) -> None:
         df_table1 = self.sheet_files[table1["sheet_name"]]
         df_table2 = self.sheet_files[table2["sheet_name"]]
+        df_table2[related["field"]] = df_table2[related["field"]].fillna(0)
+        df_table2[related["field"]] = df_table2[related["field"]].astype(int)
+        df_table2[related["field"]] = df_table2[related["field"]].apply(
+            lambda x: uuid.uuid5(uuid.NAMESPACE_DNS, f'{table1["sheet_name"]}{x}') if x != 0 else None
+        )
+        self.sheet_files[table1["sheet_name"]] = df_table2
+
         ids_table1 = set(df_table1["id"].dropna().unique().tolist())
-        ids_related_table = set(df_table2[related["field"]].dropna().unique().tolist())
+        ids_related_table = set(
+            df_table2[related["field"]].dropna().unique().tolist())
 
         if not ids_related_table.issubset(ids_table1):
             raise Exception(
-                f"ids {ids_related_table.difference(ids_table1)} not found")
+                f"{table1['model']} {table2['model']}: ids {ids_related_table.difference(ids_table1)} not found")
 
     def create_fixture(self, item: dict):
         sheet = self.sheet_files[item["sheet_name"]].astype(str)
         for record in sheet.to_dict("records"):
             id = record.pop("id")
             self.result.append(
-                {"model": item["model"], "pk": id, "fields": record}
+                {"model": f'{self.app}.{item["model"].lower()}',
+                 "pk": id, "fields": record}
             )
 
-    def populate_database(self):
-        pass
+    def populate_database(self, item: dict):
+        sheet = self.sheet_files[item["sheet_name"]].iloc[:, :]
+        model = apps.get_model(self.app, item["model"].lower())
+        for record in sheet.to_dict("records"):
+            if item["related_fields"]:
+                for related in item["related_fields"]:
+                    related_table = list(filter(
+                        lambda x: x["model"] == related["model"],
+                        self.data_definition
+                    ))
+                    related_model = apps.get_model(
+                        self.app, related_table[0]["model"].lower()
+                    )
+                    record[related["field"]] = related_model.objects.get(
+                        id=record[related["field"]]
+                    ) if record[related["field"]] is not None else None
+            model(**record).save()
 
     def run(self, mode: int):
         if not mode in [DataCreator.FIXTURE, DataCreator.POPULATE]:
@@ -62,44 +103,7 @@ class DataReader:
         self.sheet_files = self.generate_data_from_sheet()
         self.iterate_over_data(mode)
 
-        with open("utils/initial_data/fixture.json", "w") as file:
-            file.write(json.dumps(self.result, sort_keys=True, indent=4))
-            file.close()
-
-DataReader(
-    data_file="utils/initial_data/data_inversiones.ods",
-    data_definition=[
-        {
-            "sheet_name": "money",
-            "model": "Money",
-            "related_fields": [],
-        },
-        {
-            "sheet_name": "broker",
-            "model": "Broker",
-            "related_fields": [],
-        },
-        {
-            "sheet_name": "account",
-            "model": "Account",
-            "related_fields": [
-                {"model": "Broker", "field": "broker"}
-            ]
-        },
-        {
-            "sheet_name": "assets",
-            "model": "Asset",
-            "related_fields": [
-                {"model": "Account", "field": "account"}
-            ]
-        },
-        {
-            "sheet_name": "positions",
-            "model": "Position",
-            "related_fields": [
-                {"model": "Position", "field": "reference"},
-                {"model": "Asset", "field": "asset"}
-            ]
-        }
-    ]
-).run(mode=DataCreator.FIXTURE)
+        if mode == DataCreator.FIXTURE:
+            with open("utils/initial_data/fixture.json", "w") as file:
+                file.write(json.dumps(self.result, sort_keys=True, indent=4))
+                file.close()
