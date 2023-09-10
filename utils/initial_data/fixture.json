@@ -4,35 +4,35 @@
             "currency": "USD"
         },
         "model": "position.money",
-        "pk": "1"
+        "pk": "5eeb7eec-7dc5-55dd-a627-f1079c1afa3f"
     },
     {
         "fields": {
             "currency": "COP"
         },
         "model": "position.money",
-        "pk": "2"
+        "pk": "ba876c53-da24-5546-8f58-7e4294661680"
     },
     {
         "fields": {
             "currency": "AUD"
         },
         "model": "position.money",
-        "pk": "3"
+        "pk": "ec569377-bc89-5c29-9091-2b200235a966"
     },
     {
         "fields": {
             "currency": "DOT"
         },
         "model": "position.money",
-        "pk": "4"
+        "pk": "17eafc67-1431-5a91-9230-3b58854f69de"
     },
     {
         "fields": {
             "currency": "BTC"
         },
         "model": "position.money",
-        "pk": "5"
+        "pk": "a8c31b0a-a70d-5f6a-aefc-3d04b55da32f"
     },
     {
         "fields": {
@@ -40,7 +40,7 @@
             "website": "https://pepperstone.com"
         },
         "model": "position.broker",
-        "pk": "1"
+        "pk": "f51f9ed2-6732-521c-ae22-78e5457729e8"
     },
     {
         "fields": {
@@ -48,7 +48,7 @@
             "website": "nan"
         },
         "model": "position.broker",
-        "pk": "2"
+        "pk": "ebb9a3e1-7161-55d6-8ca1-8071eba10211"
     },
     {
         "fields": {
@@ -56,277 +56,277 @@
             "website": "nan"
         },
         "model": "position.broker",
-        "pk": "3"
+        "pk": "8a294f02-e683-5f9b-9a06-510b327d409f"
     },
     {
         "fields": {
             "account_type": "nan",
-            "broker": "1",
-            "leverage": "1:100",
+            "broker": "f51f9ed2-6732-521c-ae22-78e5457729e8",
+            "leverage": "100",
             "name": "Demo-01"
         },
         "model": "position.account",
-        "pk": "1"
+        "pk": "c8dfd61e-69db-522d-93a6-e7744d9fc231"
     },
     {
         "fields": {
             "account_type": "nan",
-            "broker": "1",
-            "leverage": "1:200",
+            "broker": "f51f9ed2-6732-521c-ae22-78e5457729e8",
+            "leverage": "200",
             "name": "Demo-02"
         },
         "model": "position.account",
-        "pk": "2"
+        "pk": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3"
     },
     {
         "fields": {
             "account_type": "Corriente",
-            "broker": "2",
-            "leverage": "nan",
+            "broker": "ebb9a3e1-7161-55d6-8ca1-8071eba10211",
+            "leverage": "1",
             "name": "Bancolombia 9121556284"
         },
         "model": "position.account",
-        "pk": "3"
+        "pk": "5be86589-ec2e-5db8-b388-36d2920a5511"
     },
     {
         "fields": {
             "account_type": "Ahorros",
-            "broker": "2",
-            "leverage": "nan",
+            "broker": "ebb9a3e1-7161-55d6-8ca1-8071eba10211",
+            "leverage": "1",
             "name": "Davivienda 8416518351"
         },
         "model": "position.account",
-        "pk": "4"
+        "pk": "fd1b6c0c-96de-50ae-9c24-16fec38849f5"
     },
     {
         "fields": {
             "account_type": "wallet",
-            "broker": "3",
-            "leverage": "nan",
+            "broker": "8a294f02-e683-5f9b-9a06-510b327d409f",
+            "leverage": "1",
             "name": "electrum"
         },
         "model": "position.account",
-        "pk": "5"
+        "pk": "d3c8b095-4f9e-5f44-832d-e7ebbe14f3e8"
     },
     {
         "fields": {
             "account_type": "wallet",
-            "broker": "3",
-            "leverage": "nan",
+            "broker": "8a294f02-e683-5f9b-9a06-510b327d409f",
+            "leverage": "1",
             "name": "polkadot.js"
         },
         "model": "position.account",
-        "pk": "6"
+        "pk": "f8b3c42e-c3f1-563c-88bd-f0336e8679b9"
     },
     {
         "fields": {
             "account_type": "exchange",
-            "broker": "3",
-            "leverage": "nan",
+            "broker": "8a294f02-e683-5f9b-9a06-510b327d409f",
+            "leverage": "1",
             "name": "binance"
         },
         "model": "position.account",
-        "pk": "7"
+        "pk": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb"
     },
     {
         "fields": {
-            "account": "1",
-            "long_swap_coeficient": "nan",
+            "account": "c8dfd61e-69db-522d-93a6-e7744d9fc231",
+            "long_swap_coeficient": "0",
             "name": "QQQ",
-            "presition": "2.0",
-            "short_swap_coeficient": "nan",
-            "swap_coeficient": "nan"
+            "presition": "2",
+            "short_swap_coeficient": "0",
+            "swap_coeficient": "0"
         },
         "model": "position.asset",
-        "pk": "1"
+        "pk": "7e50b079-882e-59a0-b988-1f7c9efc92e5"
     },
     {
         "fields": {
-            "account": "1",
-            "long_swap_coeficient": "nan",
+            "account": "c8dfd61e-69db-522d-93a6-e7744d9fc231",
+            "long_swap_coeficient": "0",
             "name": "XAUUSD",
-            "presition": "2.0",
-            "short_swap_coeficient": "nan",
-            "swap_coeficient": "nan"
+            "presition": "2",
+            "short_swap_coeficient": "0",
+            "swap_coeficient": "0"
         },
         "model": "position.asset",
-        "pk": "2"
+        "pk": "5dc83169-39ac-5b34-9f3d-d7b06fe52e74"
     },
     {
         "fields": {
-            "account": "2",
-            "long_swap_coeficient": "nan",
+            "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
+            "long_swap_coeficient": "0",
             "name": "EURUSD",
-            "presition": "5.0",
-            "short_swap_coeficient": "nan",
-            "swap_coeficient": "nan"
+            "presition": "5",
+            "short_swap_coeficient": "0",
+            "swap_coeficient": "0"
         },
         "model": "position.asset",
-        "pk": "3"
+        "pk": "d07de71f-b432-55a7-8890-bdc2c26e48c9"
     },
     {
         "fields": {
-            "account": "3",
-            "long_swap_coeficient": "nan",
+            "account": "5be86589-ec2e-5db8-b388-36d2920a5511",
+            "long_swap_coeficient": "0",
             "name": "casa cachipay",
-            "presition": "nan",
-            "short_swap_coeficient": "nan",
-            "swap_coeficient": "nan"
+            "presition": "0",
+            "short_swap_coeficient": "0",
+            "swap_coeficient": "0"
         },
         "model": "position.asset",
-        "pk": "4"
+        "pk": "a3ba2353-b42e-5d79-bf32-40bfd38b7cf2"
     },
     {
         "fields": {
-            "account": "3",
-            "long_swap_coeficient": "nan",
+            "account": "5be86589-ec2e-5db8-b388-36d2920a5511",
+            "long_swap_coeficient": "0",
             "name": "casa el rosal",
-            "presition": "nan",
-            "short_swap_coeficient": "nan",
-            "swap_coeficient": "nan"
+            "presition": "0",
+            "short_swap_coeficient": "0",
+            "swap_coeficient": "0"
         },
         "model": "position.asset",
-        "pk": "5"
+        "pk": "c7482f5a-d26f-5fbb-8d24-8c719603e344"
     },
     {
         "fields": {
-            "account": "4",
-            "long_swap_coeficient": "nan",
+            "account": "fd1b6c0c-96de-50ae-9c24-16fec38849f5",
+            "long_swap_coeficient": "0",
             "name": "casa villa verde",
-            "presition": "nan",
-            "short_swap_coeficient": "nan",
-            "swap_coeficient": "nan"
+            "presition": "0",
+            "short_swap_coeficient": "0",
+            "swap_coeficient": "0"
         },
         "model": "position.asset",
-        "pk": "6"
+        "pk": "e0b281a9-ba51-5352-990e-457e1a79730e"
     },
     {
         "fields": {
-            "account": "5",
-            "long_swap_coeficient": "nan",
+            "account": "d3c8b095-4f9e-5f44-832d-e7ebbe14f3e8",
+            "long_swap_coeficient": "0",
             "name": "BTC",
-            "presition": "nan",
-            "short_swap_coeficient": "nan",
-            "swap_coeficient": "nan"
+            "presition": "0",
+            "short_swap_coeficient": "0",
+            "swap_coeficient": "0"
         },
         "model": "position.asset",
-        "pk": "7"
+        "pk": "bbf07cb4-b382-57b1-926a-1e1d6554e988"
     },
     {
         "fields": {
-            "account": "6",
-            "long_swap_coeficient": "nan",
+            "account": "f8b3c42e-c3f1-563c-88bd-f0336e8679b9",
+            "long_swap_coeficient": "0",
             "name": "DOT",
-            "presition": "nan",
-            "short_swap_coeficient": "nan",
-            "swap_coeficient": "nan"
+            "presition": "0",
+            "short_swap_coeficient": "0",
+            "swap_coeficient": "0"
         },
         "model": "position.asset",
-        "pk": "8"
+        "pk": "23835040-ae1b-5ee9-9e7e-ea63afa58ac9"
     },
     {
         "fields": {
-            "account": "7",
-            "long_swap_coeficient": "nan",
+            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
+            "long_swap_coeficient": "0",
             "name": "BTC",
-            "presition": "nan",
-            "short_swap_coeficient": "nan",
-            "swap_coeficient": "nan"
+            "presition": "0",
+            "short_swap_coeficient": "0",
+            "swap_coeficient": "0"
         },
         "model": "position.asset",
-        "pk": "9"
+        "pk": "f912599d-cfb9-554f-a335-a196affd788a"
     },
     {
         "fields": {
-            "account": "7",
-            "long_swap_coeficient": "nan",
+            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
+            "long_swap_coeficient": "0",
             "name": "DOT",
-            "presition": "nan",
-            "short_swap_coeficient": "nan",
-            "swap_coeficient": "nan"
+            "presition": "0",
+            "short_swap_coeficient": "0",
+            "swap_coeficient": "0"
         },
         "model": "position.asset",
-        "pk": "10"
+        "pk": "4796cf63-1c75-589a-8784-69b8c4c161ba"
     },
     {
         "fields": {
-            "account": "7",
-            "long_swap_coeficient": "nan",
+            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
+            "long_swap_coeficient": "0",
             "name": "ADA",
-            "presition": "nan",
-            "short_swap_coeficient": "nan",
-            "swap_coeficient": "nan"
+            "presition": "0",
+            "short_swap_coeficient": "0",
+            "swap_coeficient": "0"
         },
         "model": "position.asset",
-        "pk": "11"
+        "pk": "73890140-7cb3-5a4c-bae4-30653a2d7045"
     },
     {
         "fields": {
-            "account": "2",
-            "long_swap_coeficient": "nan",
+            "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
+            "long_swap_coeficient": "0",
             "name": "BTC",
-            "presition": "nan",
-            "short_swap_coeficient": "nan",
-            "swap_coeficient": "nan"
+            "presition": "0",
+            "short_swap_coeficient": "0",
+            "swap_coeficient": "0"
         },
         "model": "position.asset",
-        "pk": "12"
+        "pk": "f11b6ec0-9290-514a-9140-4a0b34f9f4f1"
     },
     {
         "fields": {
-            "account": "1",
-            "long_swap_coeficient": "nan",
+            "account": "c8dfd61e-69db-522d-93a6-e7744d9fc231",
+            "long_swap_coeficient": "0",
             "name": "COPUSD",
-            "presition": "nan",
-            "short_swap_coeficient": "nan",
-            "swap_coeficient": "nan"
+            "presition": "0",
+            "short_swap_coeficient": "0",
+            "swap_coeficient": "0"
         },
         "model": "position.asset",
-        "pk": "13"
+        "pk": "fa8423fe-10b8-5d3b-9334-0d653e8595e7"
     },
     {
         "fields": {
-            "asset": "10",
+            "asset": "4796cf63-1c75-589a-8784-69b8c4c161ba",
             "close_date": "2020-12-04",
-            "direction": "in",
+            "direction": "1",
             "is_leveraged": "False",
             "open_date": "2020-01-01",
-            "order_type": "buy",
+            "order_type": "1",
             "price": "5.12",
-            "reference": "nan",
+            "reference": "None",
             "volume": "2"
         },
         "model": "position.position",
-        "pk": "1"
+        "pk": "cd024e82-7a4d-5093-81ca-03608f01ae62"
     },
     {
         "fields": {
-            "asset": "10",
+            "asset": "4796cf63-1c75-589a-8784-69b8c4c161ba",
             "close_date": "2020-08-20",
-            "direction": "out",
+            "direction": "0",
             "is_leveraged": "False",
             "open_date": "2020-08-20",
-            "order_type": "buy",
+            "order_type": "1",
             "price": "6.33",
-            "reference": "1.0",
+            "reference": "cd024e82-7a4d-5093-81ca-03608f01ae62",
             "volume": "1"
         },
         "model": "position.position",
-        "pk": "2"
+        "pk": "3e6d34c0-d66b-539a-b521-3a863ff326a5"
     },
     {
         "fields": {
-            "asset": "10",
+            "asset": "4796cf63-1c75-589a-8784-69b8c4c161ba",
             "close_date": "2020-12-04",
-            "direction": "out",
+            "direction": "0",
             "is_leveraged": "False",
             "open_date": "2020-12-04",
-            "order_type": "buy",
+            "order_type": "1",
             "price": "7.11",
-            "reference": "1.0",
+            "reference": "cd024e82-7a4d-5093-81ca-03608f01ae62",
             "volume": "1"
         },
         "model": "position.position",
-        "pk": "3"
+        "pk": "7f95c9c7-5fcf-58c6-a68f-4b82aaab258d"
     }
 ]

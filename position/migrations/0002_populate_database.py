@@ -6,7 +6,7 @@ from utils.constant import DataCreator
 
 
 def populate_database(apps, schema_editor):
-    DataReader(
+    reader = DataReader(
         data_file="utils/initial_data/data_inversiones.ods",
         app="position",
         data_definition=[
@@ -43,7 +43,9 @@ def populate_database(apps, schema_editor):
                 ]
             }
         ]
-    ).run(mode=DataCreator.POPULATE)
+    )
+    reader.run(mode=DataCreator.POPULATE)
+    reader.run(mode=DataCreator.FIXTURE)
 
 
 class Migration(migrations.Migration):
