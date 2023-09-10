@@ -25,8 +25,6 @@ class DataReader:
         all_sheets = {}
         for sheet in self.sheets_names:
             df = pd.read_excel(self.data, sheet)
-            if sheet == 'positions':
-                print(df)
             df["id"] = df["id"].apply(lambda x: uuid.uuid5(
                 uuid.NAMESPACE_DNS, f'{sheet}{x}'))
             all_sheets[sheet] = df
