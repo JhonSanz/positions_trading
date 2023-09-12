@@ -1,3 +1,25 @@
+## Generate endpoints automatically
+1. Create all your models of your app
+2. Run the following command
+```bash
+python manage.py add_endpoint -a YOUR_APP_NAME -p YOUR_TARGET_PATH
+```
+3. Modify the generated serializers to your needs
+4. Modify the generated views to your needs
+5. Modify the generated urls to your needs
+6. Enjoy it!
+
+## Generate cURL commands as endpoints documentation
+1. Create all your views and serializers
+2. Register all your routes in the urls.py file
+3. Run the following command
+```bash
+python manage.py create_curl -a YOUR_APP_NAME
+```
+4. It will create a directory name docs on your project root directory
+5. Import it all in your postman
+6. Enjoy it!
+
 ## Restore database
 1. Create a backup of the database. If you are using docker this is the command
 ```bash

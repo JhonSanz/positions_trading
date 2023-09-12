@@ -4,11 +4,14 @@ from position.models import Position
 from position.serializers.position import PositionCreateSerializer
 from position.serializers.position import PositionSerializer
 from utils.filter_with_params import FilterManager
+from utils.paginator import CustomPagination
+
 
 class PositionViewSet(ModelViewSet):
 	serializer_class = PositionSerializer
 	queryset = Position.objects.all()
-	permission_classes = [] # [IsAuthenticated]
+	permission_classes = [IsAuthenticated]
+	pagination_class = CustomPagination
 
 	def get_serializer_class(self):
 		if self.action in ["create", "update"]:

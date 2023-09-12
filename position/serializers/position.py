@@ -10,7 +10,7 @@ class PositionSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'created_at', 'updated_at', 'open_date',
             'reference', 'direction',
-            'close_date', 'price', 'volume', 'leverage',
+            'close_date', 'price', 'volume', 'is_leveraged',
             'order_type', 'order_type_display', 'asset'
         ]
 
@@ -20,5 +20,5 @@ class PositionCreateSerializer(serializers.ModelSerializer):
         model = Position
         fields = [
             'reference', 'open_date', 'close_date', 'price', 'volume',
-            'leverage', 'order_type', 'asset', 'direction'
+            'is_leveraged', 'order_type', 'asset', 'direction'
         ]

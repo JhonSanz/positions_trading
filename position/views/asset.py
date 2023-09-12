@@ -4,12 +4,14 @@ from position.models import Asset
 from position.serializers.asset import AssetCreateSerializer
 from position.serializers.asset import AssetSerializer
 from utils.filter_with_params import FilterManager
+from utils.paginator import CustomPagination
 
 
 class AssetViewSet(ModelViewSet):
 	serializer_class = AssetSerializer
 	queryset = Asset.objects.all()
-	permission_classes = [] # [IsAuthenticated]
+	permission_classes = [IsAuthenticated]
+	pagination_class = CustomPagination
 
 	def get_serializer_class(self):
 		if self.action in ["create", "update"]:

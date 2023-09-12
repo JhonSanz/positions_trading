@@ -4,11 +4,13 @@ from position.models import AccountMoney
 from position.serializers.accountmoney import AccountMoneyCreateSerializer
 from position.serializers.accountmoney import AccountMoneySerializer
 from utils.filter_with_params import FilterManager
+from utils.paginator import CustomPagination
 
 class AccountMoneyViewSet(ModelViewSet):
 	serializer_class = AccountMoneySerializer
 	queryset = AccountMoney.objects
-	permission_classes = [] # [IsAuthenticated]
+	permission_classes = [IsAuthenticated]
+	pagination_class = CustomPagination
 
 	def get_serializer_class(self):
 		if self.action in ["create", "update"]:
