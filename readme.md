@@ -4,7 +4,7 @@ Check the utilities/initial_data/data_creator.py script to understand the schema
 1. Create a .xls or .csv file with all your data
 2. Run the following command
 ```python
-python manage.py populate_database.py
+python manage.py populate_database
 ```
 3. It will populate your database with the data in the file. If you want to create a fixture file, you can use the second run method. Notice that your data file must have the same structure as the database definition.
 4. Enjoy

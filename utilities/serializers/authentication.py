@@ -3,7 +3,7 @@ from django.contrib.auth.backends import BaseBackend
 from django.db.models import Q
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import exceptions
-from users.models import CustomUser
+from utilities.models import CustomUser
 
 
 class CustomAuthentication(BaseBackend):
