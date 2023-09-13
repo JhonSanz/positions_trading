@@ -9,7 +9,7 @@ from utilities.paginator import CustomPagination
 
 class MoneyViewSet(ModelViewSet):
 	serializer_class = MoneySerializer
-	queryset = Money.objects.all()
+	queryset = Money.objects
 	permission_classes = [IsAuthenticated]
 	pagination_class = CustomPagination
 

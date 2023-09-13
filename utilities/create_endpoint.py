@@ -57,7 +57,7 @@ class Creator:
                 "\n""\n"
                 f"class {model_name}ViewSet(ModelViewSet):\n"
                 f"\tserializer_class = {model_name}Serializer\n"
-                f"\tqueryset = {model_name}.objects.all()\n"
+                f"\tqueryset = {model_name}.objects\n"
                 f"\tpermission_classes = [] # [IsAuthenticated]\n"
                 f"\tpagination_class = CustomPagination\n"
                 "\n""\n"

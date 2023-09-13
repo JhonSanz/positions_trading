@@ -9,7 +9,7 @@ from utilities.paginator import CustomPagination
 
 class BrokerViewSet(ModelViewSet):
 	serializer_class = BrokerSerializer
-	queryset = Broker.objects.all()
+	queryset = Broker.objects
 	permission_classes = [IsAuthenticated]
 	pagination_class = CustomPagination
 
