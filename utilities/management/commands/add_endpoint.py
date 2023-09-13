@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 from django.apps import apps
 from utilities.create_endpoint import Creator
-
+from utilities.generate_urls_file import UrlsGenerator
 
 class Command(BaseCommand):
     help = 'Creates a new endpoint'
@@ -22,6 +22,7 @@ class Command(BaseCommand):
                     "path": kwargs['path'],
                     "app": kwargs['app']
                 }).run()
+            UrlsGenerator(app=kwargs['app']).run()
             return
         Creator(**{
             "model": apps.get_model(kwargs['app'], kwargs['model'].lower()),
