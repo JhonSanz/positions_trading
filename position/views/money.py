@@ -3,8 +3,8 @@ from rest_framework.permissions import IsAuthenticated
 from position.models import Money
 from position.serializers.money import MoneyCreateSerializer
 from position.serializers.money import MoneySerializer
-from utils.filter_with_params import FilterManager
-from utils.paginator import CustomPagination
+from utilities.filter_with_params import FilterManager
+from utilities.paginator import CustomPagination
 
 
 class MoneyViewSet(ModelViewSet):

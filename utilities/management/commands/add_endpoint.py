@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 from django.apps import apps
-from utils.create_endpoint import Creator
+from utilities.create_endpoint import Creator
 
 
 class Command(BaseCommand):

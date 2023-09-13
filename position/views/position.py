@@ -3,8 +3,8 @@ from rest_framework.permissions import IsAuthenticated
 from position.models import Position
 from position.serializers.position import PositionCreateSerializer
 from position.serializers.position import PositionSerializer
-from utils.filter_with_params import FilterManager
-from utils.paginator import CustomPagination
+from utilities.filter_with_params import FilterManager
+from utilities.paginator import CustomPagination
 
 
 class PositionViewSet(ModelViewSet):

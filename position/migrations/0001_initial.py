@@ -2,7 +2,7 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
-import utils.constant
+import utilities.constant
 import uuid
 
 
@@ -85,8 +85,8 @@ class Migration(migrations.Migration):
                 ('price', models.FloatField()),
                 ('volume', models.FloatField()),
                 ('is_leveraged', models.BooleanField(default=False)),
-                ('order_type', models.SmallIntegerField(choices=[(utils.constant.PositionsType['LONG'], 'Long'), (utils.constant.PositionsType['SHORT'], 'Short')])),
-                ('direction', models.SmallIntegerField(choices=[(utils.constant.DirectionType['IN'], 'In'), (utils.constant.DirectionType['OUT'], 'Out')], default=utils.constant.DirectionType['IN'])),
+                ('order_type', models.SmallIntegerField(choices=[(utilities.constant.PositionsType['LONG'], 'Long'), (utilities.constant.PositionsType['SHORT'], 'Short')])),
+                ('direction', models.SmallIntegerField(choices=[(utilities.constant.DirectionType['IN'], 'In'), (utilities.constant.DirectionType['OUT'], 'Out')], default=utilities.constant.DirectionType['IN'])),
                 ('description', models.TextField(blank=True, null=True)),
                 ('asset', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='position.asset')),
                 ('reference', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='position.position')),

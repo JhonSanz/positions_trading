@@ -1,7 +1,7 @@
 import re
 import os
 from django.core.management.base import BaseCommand
-from utils.generate_curl import GenerateCurl
+from utilities.generate_curl import GenerateCurl
 from inversiones.urls import urlpatterns
 
 

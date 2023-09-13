@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'users',
     'position',
+    'utilities'
 ]
 
 MIDDLEWARE = [
@@ -136,7 +137,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    'DEFAULT_PAGINATION_CLASS': 'utils.paginator.CustomPagination',
+    'DEFAULT_PAGINATION_CLASS': 'utilities.paginator.CustomPagination',
     'PAGE_SIZE': 100
 }
 

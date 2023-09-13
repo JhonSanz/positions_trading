@@ -3,8 +3,8 @@ from rest_framework.permissions import IsAuthenticated
 from position.models import Account
 from position.serializers.account import AccountCreateSerializer
 from position.serializers.account import AccountSerializer
-from utils.filter_with_params import FilterManager
-from utils.paginator import CustomPagination
+from utilities.filter_with_params import FilterManager
+from utilities.paginator import CustomPagination
 
 class AccountViewSet(ModelViewSet):
 	serializer_class = AccountSerializer

@@ -102,6 +102,6 @@ class DataReader:
         self.iterate_over_data(mode)
 
         if mode == DataCreator.FIXTURE:
-            with open("utils/initial_data/fixture.json", "w") as file:
+            with open("utilities/initial_data/fixture.json", "w") as file:
                 file.write(json.dumps(self.result, sort_keys=True, indent=4))
                 file.close()

@@ -1,6 +1,6 @@
 from django.db import models
-from utils.abstract_model import AbstractModel
-from utils.constant import PositionsType, DirectionType
+from utilities.models import AbstractModel
+from utilities.constant import PositionsType, DirectionType
 
 
 class Money(AbstractModel):

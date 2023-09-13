@@ -3,8 +3,8 @@ from rest_framework.permissions import IsAuthenticated
 from position.models import Asset
 from position.serializers.asset import AssetCreateSerializer
 from position.serializers.asset import AssetSerializer
-from utils.filter_with_params import FilterManager
-from utils.paginator import CustomPagination
+from utilities.filter_with_params import FilterManager
+from utilities.paginator import CustomPagination
 
 
 class AssetViewSet(ModelViewSet):
