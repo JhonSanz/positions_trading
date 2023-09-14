@@ -31,6 +31,9 @@ python manage.py create_curl -a YOUR_APP_NAME
 5. Import it all in your postman
 6. Enjoy
 
+## Paginator
+1. You can use "page" and "page_size" as query params to paginate your results
+
 ## Restore database
 1. Create a backup of the database. If you are using docker this is the command
 ```bash
