@@ -26,6 +26,8 @@ class FilterManager:
     def generate(self) -> list:
         visited = []
         for key, value in self.queryparams.items():
+            if not value:
+                continue
             filter_ = list(filter(lambda x: x["param"] == key, self.filters))
             if filter_ and key not in visited:
                 self.result.append(*[

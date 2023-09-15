@@ -1,9 +1,11 @@
 from rest_framework import serializers
 from position.models import Position
+from position.serializers.asset import AssetSerializer
 
 
 class PositionSerializer(serializers.ModelSerializer):
     order_type_display = serializers.CharField(source='get_order_type_display')
+    asset = AssetSerializer()
 
     class Meta:
         model = Position
