@@ -5,13 +5,14 @@ from position.serializers.asset import AssetSerializer
 
 class PositionSerializer(serializers.ModelSerializer):
     order_type_display = serializers.CharField(source='get_order_type_display')
+    direction_display = serializers.CharField(source='get_direction_display')
     asset = AssetSerializer()
 
     class Meta:
         model = Position
         fields = [
             'id', 'created_at', 'updated_at', 'open_date',
-            'reference', 'direction',
+            'reference', 'direction', 'direction_display',
             'close_date', 'price', 'volume', 'is_leveraged',
             'order_type', 'order_type_display', 'asset'
         ]

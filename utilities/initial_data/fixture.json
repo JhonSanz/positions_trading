@@ -328,5 +328,50 @@
         },
         "model": "position.position",
         "pk": "7f95c9c7-5fcf-58c6-a68f-4b82aaab258d"
+    },
+    {
+        "fields": {
+            "asset": "4796cf63-1c75-589a-8784-69b8c4c161ba",
+            "close_date": "2023-12-04",
+            "direction": "1",
+            "is_leveraged": "False",
+            "open_date": "2023-01-01",
+            "order_type": "1",
+            "price": "1.0",
+            "reference": "None",
+            "volume": "2"
+        },
+        "model": "position.position",
+        "pk": "69eda5f4-5872-5d6c-874a-0b2c778aa377"
+    },
+    {
+        "fields": {
+            "asset": "4796cf63-1c75-589a-8784-69b8c4c161ba",
+            "close_date": "2023-08-20",
+            "direction": "0",
+            "is_leveraged": "False",
+            "open_date": "2023-08-20",
+            "order_type": "1",
+            "price": "2.0",
+            "reference": "69eda5f4-5872-5d6c-874a-0b2c778aa377",
+            "volume": "1"
+        },
+        "model": "position.position",
+        "pk": "374a12aa-4656-5800-9b61-35df24d4e190"
+    },
+    {
+        "fields": {
+            "asset": "4796cf63-1c75-589a-8784-69b8c4c161ba",
+            "close_date": "2023-12-04",
+            "direction": "0",
+            "is_leveraged": "False",
+            "open_date": "2023-12-04",
+            "order_type": "1",
+            "price": "3.0",
+            "reference": "69eda5f4-5872-5d6c-874a-0b2c778aa377",
+            "volume": "1"
+        },
+        "model": "position.position",
+        "pk": "97f380b4-3767-5074-aaae-f9e2ce11f483"
     }
 ]

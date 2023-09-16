@@ -31,7 +31,7 @@ class FilterManager:
             filter_ = list(filter(lambda x: x["param"] == key, self.filters))
             if filter_ and key not in visited:
                 self.result.append(*[
-                    Q(**{found["condition"]: value})
+                    Q(**{found["condition"]: True if value in ["True", "true"] else value})
                     for found in filter_
                 ])
                 visited.append(key)

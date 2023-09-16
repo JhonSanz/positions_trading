@@ -1,3 +1,4 @@
+from rest_framework.decorators import action
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import IsAuthenticated
 from position.models import Position
@@ -32,7 +33,14 @@ class PositionViewSet(ModelViewSet):
 				{"param": "close_date_from", "condition": "close_date__date__gte"},
 				{"param": "close_date_to", "condition": "close_date__date__lte"},
 				{"param": "account", "condition": "asset__account__id"},
+				{"param": "reference", "condition": "reference__isnull"},
 			]
 			result = FilterManager(filters, self.request.query_params).generate()
 			self.queryset = self.queryset.filter(*result)
 		return self.queryset
+
+	@action(detail=True, methods=["GET"])
+	def sub_positions(self, request, pk=None):
+		position = self.get_object()
+		self.queryset = position.get_sub_positions()
+		return super().list(request, pk=None)
