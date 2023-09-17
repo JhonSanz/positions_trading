@@ -21,6 +21,7 @@ class AccountViewSet(ModelViewSet):
 		if self.action in ["list"]:
 			filters = [
 				{"param": "name", "condition": "name__icontains"},
+				{"param": "broker", "condition": "broker"},
 			]
 			result = FilterManager(filters, self.request.query_params).generate()
 			self.queryset = self.queryset.filter(*result)
