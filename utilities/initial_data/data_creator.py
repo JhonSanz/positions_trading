@@ -35,6 +35,14 @@ reader = DataReader(
                 {"model": "Position", "field": "reference"},
                 {"model": "Asset", "field": "asset"}
             ]
+        },
+        {
+            "sheet_name": "accountmoney",
+            "model": "AccountMoney",
+            "related_fields": [
+                {"model": "Account", "field": "account"},
+                {"model": "Money", "field": "money"}
+            ]
         }
     ]
 )

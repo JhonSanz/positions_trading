@@ -27,6 +27,12 @@ class Account(AbstractModel):
     def __str__(self):
         return f"{self.name}: {self.broker.name}"
 
+    def get_total_money(self):
+        return (
+            self.accountmoney_set.values("money__currency")
+            .annotate(total=models.Sum('quantity'))
+        )
+
 
 class Asset(AbstractModel):
     name = models.CharField(max_length=255)

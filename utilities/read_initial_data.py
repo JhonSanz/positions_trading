@@ -54,9 +54,10 @@ class DataReader:
         df_table2[related["field"]] = df_table2[related["field"]].fillna(0)
         df_table2[related["field"]] = df_table2[related["field"]].astype(int)
         df_table2[related["field"]] = df_table2[related["field"]].apply(
-            lambda x: uuid.uuid5(uuid.NAMESPACE_DNS, f'{table1["sheet_name"]}{x}') if x != 0 else None
+            lambda x: uuid.uuid5(
+                uuid.NAMESPACE_DNS, f'{table1["sheet_name"]}{x}') if x != 0 else None
         )
-        self.sheet_files[table1["sheet_name"]] = df_table2
+        self.sheet_files[table2["sheet_name"]] = df_table2
 
         ids_table1 = set(df_table1["id"].dropna().unique().tolist())
         ids_related_table = set(

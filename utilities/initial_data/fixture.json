@@ -373,5 +373,77 @@
         },
         "model": "position.position",
         "pk": "97f380b4-3767-5074-aaae-f9e2ce11f483"
+    },
+    {
+        "fields": {
+            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
+            "money": "5eeb7eec-7dc5-55dd-a627-f1079c1afa3f",
+            "quantity": "100"
+        },
+        "model": "position.accountmoney",
+        "pk": "51bc1c6d-aac7-5c62-949c-083576b87535"
+    },
+    {
+        "fields": {
+            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
+            "money": "5eeb7eec-7dc5-55dd-a627-f1079c1afa3f",
+            "quantity": "250"
+        },
+        "model": "position.accountmoney",
+        "pk": "0a86acfe-5d89-5c07-96f8-c46ad1535e0e"
+    },
+    {
+        "fields": {
+            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
+            "money": "5eeb7eec-7dc5-55dd-a627-f1079c1afa3f",
+            "quantity": "270"
+        },
+        "model": "position.accountmoney",
+        "pk": "27ee782a-16ee-5f2a-80b9-5ab11ae7753e"
+    },
+    {
+        "fields": {
+            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
+            "money": "ba876c53-da24-5546-8f58-7e4294661680",
+            "quantity": "35000"
+        },
+        "model": "position.accountmoney",
+        "pk": "f535354b-66cf-5fc3-b294-dac6374b7b76"
+    },
+    {
+        "fields": {
+            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
+            "money": "ba876c53-da24-5546-8f58-7e4294661680",
+            "quantity": "10000"
+        },
+        "model": "position.accountmoney",
+        "pk": "f422ebdf-3672-51a5-a36d-d5919aa448fe"
+    },
+    {
+        "fields": {
+            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
+            "money": "17eafc67-1431-5a91-9230-3b58854f69de",
+            "quantity": "8"
+        },
+        "model": "position.accountmoney",
+        "pk": "8a96262d-f9bc-5cfd-95e6-aab9a86e57d2"
+    },
+    {
+        "fields": {
+            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
+            "money": "17eafc67-1431-5a91-9230-3b58854f69de",
+            "quantity": "12"
+        },
+        "model": "position.accountmoney",
+        "pk": "4b75513c-b418-5cff-8d69-b514c512aa42"
+    },
+    {
+        "fields": {
+            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
+            "money": "17eafc67-1431-5a91-9230-3b58854f69de",
+            "quantity": "25"
+        },
+        "model": "position.accountmoney",
+        "pk": "e9252b94-1eaa-5f18-9c1b-5381a4b0a315"
     }
 ]
