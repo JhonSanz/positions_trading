@@ -2,6 +2,12 @@ from rest_framework import serializers
 from position.models import Asset
 
 
+class AssetSerializerMini(serializers.ModelSerializer):
+	class Meta:
+		model = Asset
+		fields = ['id', 'name']
+
+
 class AssetSerializer(serializers.ModelSerializer):
 	swap_coeficient = serializers.ListField(source="get_swap_coeficient")
 	class Meta:

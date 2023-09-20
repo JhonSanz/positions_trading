@@ -33,6 +33,7 @@ class PositionViewSet(ModelViewSet):
 				{"param": "close_date_from", "condition": "close_date__date__gte"},
 				{"param": "close_date_to", "condition": "close_date__date__lte"},
 				{"param": "account", "condition": "asset__account__id"},
+				{"param": "asset", "condition": "asset__id"},
 				{"param": "reference", "condition": "reference__isnull"},
 			]
 			result = FilterManager(filters, self.request.query_params).generate()

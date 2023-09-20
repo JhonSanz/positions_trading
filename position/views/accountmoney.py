@@ -9,7 +9,7 @@ from utilities.paginator import CustomPagination
 class AccountMoneyViewSet(ModelViewSet):
 	serializer_class = AccountMoneySerializer
 	queryset = AccountMoney.objects
-	permission_classes = [IsAuthenticated]
+	permission_classes = []#[IsAuthenticated]
 	pagination_class = CustomPagination
 
 	def get_serializer_class(self):
@@ -22,6 +22,9 @@ class AccountMoneyViewSet(ModelViewSet):
 			filters = [
 				{"param": "quantity_from", "condition": "quantity__gte"},
 				{"param": "quantity_to", "condition": "quantity__lte"},
+				{"param": "created_at_from", "condition": "created_at__date__gte"},
+				{"param": "created_at_to", "condition": "created_at__date__lte"},
+				{"param": "account", "condition": "account__id"},
 			]
 			result = FilterManager(filters, self.request.query_params).generate()
 			self.queryset = self.queryset.filter(*result)
