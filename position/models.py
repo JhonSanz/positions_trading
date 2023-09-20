@@ -91,6 +91,7 @@ class AccountMoney(AbstractModel):
     quantity = models.FloatField()
     account = models.ForeignKey(Account, on_delete=models.PROTECT)
     money = models.ForeignKey(Money, on_delete=models.PROTECT)
+    description = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.account.name}: {self.money.currency}"
