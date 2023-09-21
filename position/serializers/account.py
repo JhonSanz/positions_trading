@@ -3,6 +3,14 @@ from position.models import Account
 from position.serializers.accountmoney import AccountMoneyTotalSerializer
 
 
+class AccountMiniSerializer(serializers.ModelSerializer):
+    deposits = AccountMoneyTotalSerializer(source='get_total_money', many=True)
+
+    class Meta:
+        model = Account
+        fields = ['id', 'name', 'deposits']
+
+
 class AccountSerializer(serializers.ModelSerializer):
     deposits = AccountMoneyTotalSerializer(source='get_total_money', many=True)
 

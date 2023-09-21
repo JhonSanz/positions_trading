@@ -16,6 +16,9 @@ class Broker(AbstractModel):
 
     def __str__(self):
         return self.name
+    
+    def get_accounts(self):
+        return self.account_set.all()
 
 
 class Account(AbstractModel):
