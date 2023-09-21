@@ -13,10 +13,11 @@ class Money(AbstractModel):
 class Broker(AbstractModel):
     name = models.CharField(max_length=255)
     website = models.URLField(null=True, blank=True)
+    user = models.ForeignKey("utilities.CustomUser", on_delete=models.PROTECT)
 
     def __str__(self):
         return self.name
-    
+
     def get_accounts(self):
         return self.account_set.all()
 

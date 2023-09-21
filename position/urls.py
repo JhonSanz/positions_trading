@@ -6,6 +6,7 @@ from position.views.account import AccountViewSet
 from position.views.asset import AssetViewSet
 from position.views.accountmoney import AccountMoneyViewSet
 from rest_framework.routers import DefaultRouter
+from position.views.filters import Filters
 
 router = DefaultRouter()
 router.register('position', PositionViewSet, basename='position')
@@ -14,6 +15,7 @@ router.register('money', MoneyViewSet, basename='money')
 router.register('account', AccountViewSet, basename='account')
 router.register('asset', AssetViewSet, basename='asset')
 router.register('accountmoney', AccountMoneyViewSet, basename='accountmoney')
+router.register('filters', Filters, basename='filters')
 
 urlpatterns = []
 urlpatterns += router.urls
