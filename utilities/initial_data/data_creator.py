@@ -1,7 +1,7 @@
 from utilities.read_initial_data import DataReader
 
 reader = DataReader(
-    data_file="utilities/initial_data/data_inversiones.ods",
+    data_file="utilities/initial_data/data_inversiones_2.ods",
     app="position",
     data_definition=[
         {
@@ -12,7 +12,9 @@ reader = DataReader(
         {
             "sheet_name": "broker",
             "model": "Broker",
-            "related_fields": [],
+            "related_fields": [
+                {"model": "CustomUser", "field": "user", "app": "utilities"}
+            ],
         },
         {
             "sheet_name": "account",

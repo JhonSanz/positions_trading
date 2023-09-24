@@ -24,6 +24,7 @@ class Broker(AbstractModel):
 
 class Account(AbstractModel):
     name = models.CharField(max_length=255)
+    details = models.TextField(null=True, blank=True)
     leverage = models.FloatField()
     account_type = models.CharField(max_length=255)
     broker = models.ForeignKey(Broker, on_delete=models.PROTECT)
@@ -41,6 +42,7 @@ class Account(AbstractModel):
 class Asset(AbstractModel):
     name = models.CharField(max_length=255)
     presition = models.IntegerField()
+    lot = models.PositiveIntegerField()
     swap_coeficient = models.CharField(
         null=True, blank=True, max_length=7,
         default="0"*7
@@ -70,7 +72,7 @@ class Position(AbstractModel):
     reference = models.ForeignKey(
         "self", on_delete=models.PROTECT, null=True, blank=True)
     open_date = models.DateTimeField()
-    close_date = models.DateTimeField(null=True, blank=True)
+    close_date = models.DateTimeField(null=True, blank=True, default=None)
     price = models.FloatField()
     volume = models.FloatField()
     is_leveraged = models.BooleanField(default=False)
@@ -93,6 +95,7 @@ class Position(AbstractModel):
 
 class AccountMoney(AbstractModel):
     quantity = models.FloatField()
+    date_deposit = models.DateTimeField(null=True, blank=True, default=None)
     account = models.ForeignKey(Account, on_delete=models.PROTECT)
     money = models.ForeignKey(Money, on_delete=models.PROTECT)
     description = models.TextField(null=True, blank=True)

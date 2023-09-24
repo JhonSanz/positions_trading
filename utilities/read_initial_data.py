@@ -35,6 +35,8 @@ class DataReader:
         for item in self.data_definition:
             if item["related_fields"]:
                 for related in item["related_fields"]:
+                    if related.get("app"):
+                        continue
                     related_table = list(filter(
                         lambda x: x["model"] == related["model"],
                         self.data_definition
@@ -77,21 +79,31 @@ class DataReader:
             )
 
     def populate_database(self, item: dict):
-        sheet = self.sheet_files[item["sheet_name"]].iloc[:, :]
+        sheet = self.sheet_files[item["sheet_name"]].iloc[:, :].astype(str).replace('nan', None)
         model = apps.get_model(self.app, item["model"].lower())
         for record in sheet.to_dict("records"):
             if item["related_fields"]:
                 for related in item["related_fields"]:
-                    related_table = list(filter(
-                        lambda x: x["model"] == related["model"],
-                        self.data_definition
-                    ))
-                    related_model = apps.get_model(
-                        self.app, related_table[0]["model"].lower()
-                    )
-                    record[related["field"]] = related_model.objects.get(
-                        id=record[related["field"]]
-                    ) if record[related["field"]] is not None else None
+                    if related.get("app"):
+                        related_model = apps.get_model(
+                            related["app"], related["model"].lower()
+                        )
+                    else:
+                        related_table = list(filter(
+                            lambda x: x["model"] == related["model"],
+                            self.data_definition
+                        ))
+                        related_model = apps.get_model(
+                            self.app, related_table[0]["model"].lower()
+                        )
+                    
+
+                    if record[related["field"]] not in ["", "None", None]:
+                        record[related["field"]] = related_model.objects.get(
+                            id=record[related["field"]]
+                        )
+                    else:
+                        record[related["field"]] = None
             model(**record).save()
 
     def run(self, mode: int):

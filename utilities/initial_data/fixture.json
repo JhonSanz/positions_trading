@@ -37,6 +37,7 @@
     {
         "fields": {
             "name": "pepperstone",
+            "user": "1",
             "website": "https://pepperstone.com"
         },
         "model": "position.broker",
@@ -45,6 +46,7 @@
     {
         "fields": {
             "name": "casas",
+            "user": "1",
             "website": "nan"
         },
         "model": "position.broker",
@@ -52,28 +54,40 @@
     },
     {
         "fields": {
-            "name": "cripto",
-            "website": "nan"
+            "name": "Hapi",
+            "user": "1",
+            "website": "https://hapi.trade/es"
         },
         "model": "position.broker",
         "pk": "8a294f02-e683-5f9b-9a06-510b327d409f"
     },
     {
         "fields": {
-            "account_type": "nan",
+            "name": "cripto",
+            "user": "1",
+            "website": "nan"
+        },
+        "model": "position.broker",
+        "pk": "c6a7a928-338a-5234-9df0-ef82a6875ef1"
+    },
+    {
+        "fields": {
+            "account_type": "standard",
             "broker": "f51f9ed2-6732-521c-ae22-78e5457729e8",
-            "leverage": "100",
-            "name": "Demo-01"
+            "details": "51113155.0",
+            "leverage": "200",
+            "name": "Cuenta real "
         },
         "model": "position.account",
         "pk": "c8dfd61e-69db-522d-93a6-e7744d9fc231"
     },
     {
         "fields": {
-            "account_type": "nan",
-            "broker": "f51f9ed2-6732-521c-ae22-78e5457729e8",
-            "leverage": "200",
-            "name": "Demo-02"
+            "account_type": "Corriente",
+            "broker": "ebb9a3e1-7161-55d6-8ca1-8071eba10211",
+            "details": "91216488305.0",
+            "leverage": "1",
+            "name": "Bancolombia "
         },
         "model": "position.account",
         "pk": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3"
@@ -81,19 +95,21 @@
     {
         "fields": {
             "account_type": "Corriente",
-            "broker": "ebb9a3e1-7161-55d6-8ca1-8071eba10211",
+            "broker": "8a294f02-e683-5f9b-9a06-510b327d409f",
+            "details": "nan",
             "leverage": "1",
-            "name": "Bancolombia 9121556284"
+            "name": "Cuenta Hapi"
         },
         "model": "position.account",
         "pk": "5be86589-ec2e-5db8-b388-36d2920a5511"
     },
     {
         "fields": {
-            "account_type": "Ahorros",
-            "broker": "ebb9a3e1-7161-55d6-8ca1-8071eba10211",
+            "account_type": "wallet",
+            "broker": "c6a7a928-338a-5234-9df0-ef82a6875ef1",
+            "details": "nan",
             "leverage": "1",
-            "name": "Davivienda 8416518351"
+            "name": "electrum"
         },
         "model": "position.account",
         "pk": "fd1b6c0c-96de-50ae-9c24-16fec38849f5"
@@ -101,41 +117,34 @@
     {
         "fields": {
             "account_type": "wallet",
-            "broker": "8a294f02-e683-5f9b-9a06-510b327d409f",
+            "broker": "c6a7a928-338a-5234-9df0-ef82a6875ef1",
+            "details": "nan",
             "leverage": "1",
-            "name": "electrum"
+            "name": "polkadot.js"
         },
         "model": "position.account",
         "pk": "d3c8b095-4f9e-5f44-832d-e7ebbe14f3e8"
     },
     {
         "fields": {
-            "account_type": "wallet",
-            "broker": "8a294f02-e683-5f9b-9a06-510b327d409f",
+            "account_type": "exchange",
+            "broker": "c6a7a928-338a-5234-9df0-ef82a6875ef1",
+            "details": "nan",
             "leverage": "1",
-            "name": "polkadot.js"
+            "name": "binance"
         },
         "model": "position.account",
         "pk": "f8b3c42e-c3f1-563c-88bd-f0336e8679b9"
     },
     {
         "fields": {
-            "account_type": "exchange",
-            "broker": "8a294f02-e683-5f9b-9a06-510b327d409f",
-            "leverage": "1",
-            "name": "binance"
-        },
-        "model": "position.account",
-        "pk": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb"
-    },
-    {
-        "fields": {
             "account": "c8dfd61e-69db-522d-93a6-e7744d9fc231",
-            "long_swap_coeficient": "0",
+            "long_swap_coeficient": "-7.8",
+            "lot": "1",
             "name": "QQQ",
             "presition": "2",
-            "short_swap_coeficient": "0",
-            "swap_coeficient": "0"
+            "short_swap_coeficient": "2.8",
+            "swap_coeficient": "1111300"
         },
         "model": "position.asset",
         "pk": "7e50b079-882e-59a0-b988-1f7c9efc92e5"
@@ -143,11 +152,12 @@
     {
         "fields": {
             "account": "c8dfd61e-69db-522d-93a6-e7744d9fc231",
-            "long_swap_coeficient": "0",
-            "name": "XAUUSD",
+            "long_swap_coeficient": "-17.5",
+            "lot": "10",
+            "name": "DOT",
             "presition": "2",
-            "short_swap_coeficient": "0",
-            "swap_coeficient": "0"
+            "short_swap_coeficient": "5.0",
+            "swap_coeficient": "1111300"
         },
         "model": "position.asset",
         "pk": "5dc83169-39ac-5b34-9f3d-d7b06fe52e74"
@@ -155,10 +165,11 @@
     {
         "fields": {
             "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
-            "long_swap_coeficient": "0",
-            "name": "EURUSD",
-            "presition": "5",
-            "short_swap_coeficient": "0",
+            "long_swap_coeficient": "0.0",
+            "lot": "1",
+            "name": "casa cachipay",
+            "presition": "0",
+            "short_swap_coeficient": "0.0",
             "swap_coeficient": "0"
         },
         "model": "position.asset",
@@ -167,10 +178,11 @@
     {
         "fields": {
             "account": "5be86589-ec2e-5db8-b388-36d2920a5511",
-            "long_swap_coeficient": "0",
-            "name": "casa cachipay",
-            "presition": "0",
-            "short_swap_coeficient": "0",
+            "long_swap_coeficient": "0.0",
+            "lot": "1",
+            "name": "Poder de compra",
+            "presition": "2",
+            "short_swap_coeficient": "0.0",
             "swap_coeficient": "0"
         },
         "model": "position.asset",
@@ -178,11 +190,12 @@
     },
     {
         "fields": {
-            "account": "5be86589-ec2e-5db8-b388-36d2920a5511",
-            "long_swap_coeficient": "0",
-            "name": "casa el rosal",
-            "presition": "0",
-            "short_swap_coeficient": "0",
+            "account": "c8dfd61e-69db-522d-93a6-e7744d9fc231",
+            "long_swap_coeficient": "0.0",
+            "lot": "1",
+            "name": "COPUSD",
+            "presition": "1",
+            "short_swap_coeficient": "0.0",
             "swap_coeficient": "0"
         },
         "model": "position.asset",
@@ -190,258 +203,112 @@
     },
     {
         "fields": {
-            "account": "fd1b6c0c-96de-50ae-9c24-16fec38849f5",
-            "long_swap_coeficient": "0",
-            "name": "casa villa verde",
-            "presition": "0",
-            "short_swap_coeficient": "0",
-            "swap_coeficient": "0"
-        },
-        "model": "position.asset",
-        "pk": "e0b281a9-ba51-5352-990e-457e1a79730e"
-    },
-    {
-        "fields": {
-            "account": "d3c8b095-4f9e-5f44-832d-e7ebbe14f3e8",
-            "long_swap_coeficient": "0",
-            "name": "BTC",
-            "presition": "0",
-            "short_swap_coeficient": "0",
-            "swap_coeficient": "0"
-        },
-        "model": "position.asset",
-        "pk": "bbf07cb4-b382-57b1-926a-1e1d6554e988"
-    },
-    {
-        "fields": {
-            "account": "f8b3c42e-c3f1-563c-88bd-f0336e8679b9",
-            "long_swap_coeficient": "0",
-            "name": "DOT",
-            "presition": "0",
-            "short_swap_coeficient": "0",
-            "swap_coeficient": "0"
-        },
-        "model": "position.asset",
-        "pk": "23835040-ae1b-5ee9-9e7e-ea63afa58ac9"
-    },
-    {
-        "fields": {
-            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
-            "long_swap_coeficient": "0",
-            "name": "BTC",
-            "presition": "0",
-            "short_swap_coeficient": "0",
-            "swap_coeficient": "0"
-        },
-        "model": "position.asset",
-        "pk": "f912599d-cfb9-554f-a335-a196affd788a"
-    },
-    {
-        "fields": {
-            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
-            "long_swap_coeficient": "0",
-            "name": "DOT",
-            "presition": "0",
-            "short_swap_coeficient": "0",
-            "swap_coeficient": "0"
-        },
-        "model": "position.asset",
-        "pk": "4796cf63-1c75-589a-8784-69b8c4c161ba"
-    },
-    {
-        "fields": {
-            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
-            "long_swap_coeficient": "0",
-            "name": "ADA",
-            "presition": "0",
-            "short_swap_coeficient": "0",
-            "swap_coeficient": "0"
-        },
-        "model": "position.asset",
-        "pk": "73890140-7cb3-5a4c-bae4-30653a2d7045"
-    },
-    {
-        "fields": {
-            "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
-            "long_swap_coeficient": "0",
-            "name": "BTC",
-            "presition": "0",
-            "short_swap_coeficient": "0",
-            "swap_coeficient": "0"
-        },
-        "model": "position.asset",
-        "pk": "f11b6ec0-9290-514a-9140-4a0b34f9f4f1"
-    },
-    {
-        "fields": {
-            "account": "c8dfd61e-69db-522d-93a6-e7744d9fc231",
-            "long_swap_coeficient": "0",
-            "name": "COPUSD",
-            "presition": "0",
-            "short_swap_coeficient": "0",
-            "swap_coeficient": "0"
-        },
-        "model": "position.asset",
-        "pk": "fa8423fe-10b8-5d3b-9334-0d653e8595e7"
-    },
-    {
-        "fields": {
-            "asset": "4796cf63-1c75-589a-8784-69b8c4c161ba",
-            "close_date": "2020-12-04",
+            "asset": "c7482f5a-d26f-5fbb-8d24-8c719603e344",
+            "close_date": "nan",
+            "description": "nan",
             "direction": "1",
             "is_leveraged": "False",
-            "open_date": "2020-01-01",
+            "open_date": "2023-07-27",
             "order_type": "1",
-            "price": "5.12",
+            "price": "4028.28753021216",
             "reference": "None",
-            "volume": "2"
+            "volume": "0.0831941606666667"
         },
         "model": "position.position",
         "pk": "cd024e82-7a4d-5093-81ca-03608f01ae62"
     },
     {
         "fields": {
-            "asset": "4796cf63-1c75-589a-8784-69b8c4c161ba",
-            "close_date": "2020-08-20",
-            "direction": "0",
+            "asset": "c7482f5a-d26f-5fbb-8d24-8c719603e344",
+            "close_date": "nan",
+            "description": "nan",
+            "direction": "1",
             "is_leveraged": "False",
-            "open_date": "2020-08-20",
+            "open_date": "2023-08-11",
             "order_type": "1",
-            "price": "6.33",
-            "reference": "cd024e82-7a4d-5093-81ca-03608f01ae62",
-            "volume": "1"
+            "price": "4041.19020535233",
+            "reference": "None",
+            "volume": "0.0413318828148148"
         },
         "model": "position.position",
         "pk": "3e6d34c0-d66b-539a-b521-3a863ff326a5"
     },
     {
         "fields": {
-            "asset": "4796cf63-1c75-589a-8784-69b8c4c161ba",
-            "close_date": "2020-12-04",
-            "direction": "0",
-            "is_leveraged": "False",
-            "open_date": "2020-12-04",
-            "order_type": "1",
-            "price": "7.11",
-            "reference": "cd024e82-7a4d-5093-81ca-03608f01ae62",
-            "volume": "1"
-        },
-        "model": "position.position",
-        "pk": "7f95c9c7-5fcf-58c6-a68f-4b82aaab258d"
-    },
-    {
-        "fields": {
-            "asset": "4796cf63-1c75-589a-8784-69b8c4c161ba",
-            "close_date": "2023-12-04",
-            "direction": "1",
-            "is_leveraged": "False",
-            "open_date": "2023-01-01",
-            "order_type": "1",
-            "price": "1.0",
-            "reference": "None",
-            "volume": "2"
-        },
-        "model": "position.position",
-        "pk": "69eda5f4-5872-5d6c-874a-0b2c778aa377"
-    },
-    {
-        "fields": {
-            "asset": "4796cf63-1c75-589a-8784-69b8c4c161ba",
-            "close_date": "2023-08-20",
-            "direction": "0",
-            "is_leveraged": "False",
-            "open_date": "2023-08-20",
-            "order_type": "1",
-            "price": "2.0",
-            "reference": "69eda5f4-5872-5d6c-874a-0b2c778aa377",
-            "volume": "1"
-        },
-        "model": "position.position",
-        "pk": "374a12aa-4656-5800-9b61-35df24d4e190"
-    },
-    {
-        "fields": {
-            "asset": "4796cf63-1c75-589a-8784-69b8c4c161ba",
-            "close_date": "2023-12-04",
-            "direction": "0",
-            "is_leveraged": "False",
-            "open_date": "2023-12-04",
-            "order_type": "1",
-            "price": "3.0",
-            "reference": "69eda5f4-5872-5d6c-874a-0b2c778aa377",
-            "volume": "1"
-        },
-        "model": "position.position",
-        "pk": "97f380b4-3767-5074-aaae-f9e2ce11f483"
-    },
-    {
-        "fields": {
-            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
-            "money": "5eeb7eec-7dc5-55dd-a627-f1079c1afa3f",
-            "quantity": "100"
+            "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
+            "date_deposit": "2023-06-10",
+            "money": "ba876c53-da24-5546-8f58-7e4294661680",
+            "quantity": "675000.0"
         },
         "model": "position.accountmoney",
         "pk": "51bc1c6d-aac7-5c62-949c-083576b87535"
     },
     {
         "fields": {
-            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
-            "money": "5eeb7eec-7dc5-55dd-a627-f1079c1afa3f",
-            "quantity": "250"
+            "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
+            "date_deposit": "2023-07-10",
+            "money": "ba876c53-da24-5546-8f58-7e4294661680",
+            "quantity": "675000.0"
         },
         "model": "position.accountmoney",
         "pk": "0a86acfe-5d89-5c07-96f8-c46ad1535e0e"
     },
     {
         "fields": {
-            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
-            "money": "5eeb7eec-7dc5-55dd-a627-f1079c1afa3f",
-            "quantity": "270"
+            "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
+            "date_deposit": "2023-07-27",
+            "money": "ba876c53-da24-5546-8f58-7e4294661680",
+            "quantity": "-1350000.0"
         },
         "model": "position.accountmoney",
         "pk": "27ee782a-16ee-5f2a-80b9-5ab11ae7753e"
     },
     {
         "fields": {
-            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
-            "money": "ba876c53-da24-5546-8f58-7e4294661680",
-            "quantity": "35000"
+            "account": "5be86589-ec2e-5db8-b388-36d2920a5511",
+            "date_deposit": "2023-07-27",
+            "money": "5eeb7eec-7dc5-55dd-a627-f1079c1afa3f",
+            "quantity": "335.13"
         },
         "model": "position.accountmoney",
         "pk": "f535354b-66cf-5fc3-b294-dac6374b7b76"
     },
     {
         "fields": {
-            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
+            "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
+            "date_deposit": "2023-08-03",
             "money": "ba876c53-da24-5546-8f58-7e4294661680",
-            "quantity": "10000"
+            "quantity": "675000.0"
         },
         "model": "position.accountmoney",
         "pk": "f422ebdf-3672-51a5-a36d-d5919aa448fe"
     },
     {
         "fields": {
-            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
-            "money": "17eafc67-1431-5a91-9230-3b58854f69de",
-            "quantity": "8"
+            "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
+            "date_deposit": "2023-08-11",
+            "money": "ba876c53-da24-5546-8f58-7e4294661680",
+            "quantity": "-675000.0"
         },
         "model": "position.accountmoney",
         "pk": "8a96262d-f9bc-5cfd-95e6-aab9a86e57d2"
     },
     {
         "fields": {
-            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
-            "money": "17eafc67-1431-5a91-9230-3b58854f69de",
-            "quantity": "12"
+            "account": "5be86589-ec2e-5db8-b388-36d2920a5511",
+            "date_deposit": "2023-08-11",
+            "money": "5eeb7eec-7dc5-55dd-a627-f1079c1afa3f",
+            "quantity": "167.03"
         },
         "model": "position.accountmoney",
         "pk": "4b75513c-b418-5cff-8d69-b514c512aa42"
     },
     {
         "fields": {
-            "account": "27fabb57-a1a5-55f0-a81d-e9c5e7c37ffb",
-            "money": "17eafc67-1431-5a91-9230-3b58854f69de",
-            "quantity": "25"
+            "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
+            "date_deposit": "2023-09-06",
+            "money": "ba876c53-da24-5546-8f58-7e4294661680",
+            "quantity": "675000.0"
         },
         "model": "position.accountmoney",
         "pk": "e9252b94-1eaa-5f18-9c1b-5381a4b0a315"
