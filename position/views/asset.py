@@ -10,7 +10,7 @@ from utilities.paginator import CustomPagination
 class AssetViewSet(ModelViewSet):
 	serializer_class = AssetSerializer
 	queryset = Asset.objects
-	permission_classes = [IsAuthenticated]
+	permission_classes = []#[IsAuthenticated]
 	pagination_class = CustomPagination
 
 	def get_serializer_class(self):

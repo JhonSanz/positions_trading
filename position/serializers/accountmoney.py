@@ -15,11 +15,11 @@ class AccountMoneySerializer(serializers.ModelSerializer):
         model = AccountMoney
         fields = [
             'id', 'created_at', 'updated_at', 'quantity',
-            'account', 'money'
+            'account', 'money', 'description'
         ]
 
 
 class AccountMoneyCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = AccountMoney
-        fields = ['quantity', 'account', 'money']
+        fields = ['quantity', 'date_deposit', 'account', 'money', 'description']
