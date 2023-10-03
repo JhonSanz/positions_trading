@@ -7,6 +7,8 @@ class PositionSerializer(serializers.ModelSerializer):
     order_type_display = serializers.CharField(source='get_order_type_display')
     direction_display = serializers.CharField(source='get_direction_display')
     asset = AssetSerializerMini()
+    open_date = serializers.DateTimeField(format="%Y-%m-%d %H:%M")
+    close_date = serializers.DateTimeField(format="%Y-%m-%d %H:%M")
 
     class Meta:
         model = Position
@@ -32,4 +34,5 @@ class PositionCreateSerializer(serializers.ModelSerializer):
         fields = [
             'reference', 'open_date', 'close_date', 'price', 'volume',
             'order_type', 'direction', 'asset', 'is_leveraged',
+            'description'
         ]
