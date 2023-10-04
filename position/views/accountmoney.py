@@ -25,6 +25,7 @@ class AccountMoneyViewSet(ModelViewSet):
 				{"param": "created_at_from", "condition": "created_at__date__gte"},
 				{"param": "created_at_to", "condition": "created_at__date__lte"},
 				{"param": "account", "condition": "account__id"},
+				{"param": "currency", "condition": "money__id"},
 			]
 			result = FilterManager(filters, self.request.query_params).generate()
 			self.queryset = self.queryset.filter(*result)
