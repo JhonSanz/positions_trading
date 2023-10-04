@@ -10,13 +10,13 @@ class AccountMoneyTotalSerializer(serializers.Serializer):
 
 class AccountMoneySerializer(serializers.ModelSerializer):
     money = MoneySerializer()
-    created_at = serializers.DateTimeField(format="%Y-%m-%d %H:%M")
+    date_deposit = serializers.DateTimeField(format="%Y-%m-%d %H:%M")
 
     class Meta:
         model = AccountMoney
         fields = [
             'id', 'created_at', 'updated_at', 'quantity',
-            'account', 'money', 'description'
+            'account', 'money', 'description', 'date_deposit'
         ]
 
 

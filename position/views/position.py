@@ -45,3 +45,8 @@ class PositionViewSet(ModelViewSet):
 		position = self.get_object()
 		self.queryset = position.get_sub_positions()
 		return super().list(request, pk=None)
+
+	def destroy(self, request, pk):
+		position = self.get_object()
+		Position.objects.filter(reference=position.id).delete()
+		return super().destroy(request)
