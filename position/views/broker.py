@@ -1,6 +1,7 @@
+from django.db import transaction
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import IsAuthenticated
-from position.models import Broker
+from position.models import Broker, Account, Asset, Position, AccountMoney
 from position.serializers.broker import BrokerCreateSerializer
 from position.serializers.broker import BrokerSerializer
 from utilities.filter_with_params import FilterManager
@@ -26,3 +27,12 @@ class BrokerViewSet(ModelViewSet):
 			result = FilterManager(filters, self.request.query_params).generate()
 			self.queryset = self.queryset.filter(*result)
 		return self.queryset
+
+	@transaction.atomic
+	def destroy(self, request, pk):
+		broker = self.get_object()
+		Position.objects.filter(asset__account__broker=broker).delete()
+		AccountMoney.objects.filter(account__broker=broker).delete()
+		Asset.objects.filter(account__broker=broker).delete()
+		Account.objects.filter(broker=broker).delete()
+		return super().destroy(request)

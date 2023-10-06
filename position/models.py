@@ -60,6 +60,10 @@ class Asset(AbstractModel):
             return [int(day) for day in self.swap_coeficient]
         return []
 
+    def get_swap_coeficient_display(self):
+        if self.swap_coeficient:
+            return ",".join(self.swap_coeficient)
+        return ""
 
 class Position(AbstractModel):
     ORDER_TYPES = (
