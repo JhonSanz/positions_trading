@@ -65,6 +65,7 @@ class Asset(AbstractModel):
             return ",".join(self.swap_coeficient)
         return ""
 
+
 class Position(AbstractModel):
     ORDER_TYPES = (
         (LONG, "Long"),

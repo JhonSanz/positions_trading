@@ -16,7 +16,8 @@ class AssetSerializer(serializers.ModelSerializer):
 		fields = [
 			'id', 'created_at', 'updated_at', 'name',
 			'presition', 'swap_coeficient', 'account',
-			'long_swap_coeficient', 'short_swap_coeficient'
+			'long_swap_coeficient', 'short_swap_coeficient',
+			'lot'
 		]
 
 	def get_account(self, obj):
@@ -31,6 +32,6 @@ class AssetCreateSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Asset
 		fields = [
-			'name', 'presition', 'swap_coeficient', 'account',
+			'name', 'presition', 'swap_coeficient', 'account', 'lot',
 			'long_swap_coeficient', 'short_swap_coeficient'
 		]
