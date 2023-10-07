@@ -4,7 +4,7 @@ from utilities.constant import LONG, SHORT, IN, OUT
 
 
 class Money(AbstractModel):
-    # user = models.ForeignKey("utilities.CustomUser", on_delete=models.PROTECT)
+    user = models.ForeignKey("utilities.CustomUser", on_delete=models.PROTECT)
     currency = models.CharField(max_length=3)
 
     def __str__(self):

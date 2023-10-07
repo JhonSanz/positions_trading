@@ -11,7 +11,7 @@ from utilities.paginator import CustomPagination
 class AccountViewSet(ModelViewSet):
 	serializer_class = AccountSerializer
 	queryset = Account.objects
-	permission_classes = []  # [IsAuthenticated]
+	permission_classes = [IsAuthenticated]
 	pagination_class = CustomPagination
 
 	def get_serializer_class(self):

@@ -11,7 +11,7 @@ from utilities.paginator import CustomPagination
 class BrokerViewSet(ModelViewSet):
 	serializer_class = BrokerSerializer
 	queryset = Broker.objects
-	permission_classes = []#[IsAuthenticated]
+	permission_classes = [IsAuthenticated]
 	pagination_class = CustomPagination
 
 	def get_serializer_class(self):
@@ -25,7 +25,7 @@ class BrokerViewSet(ModelViewSet):
 				{"param": "name", "condition": "name__icontains"},
 			]
 			result = FilterManager(filters, self.request.query_params).generate()
-			self.queryset = self.queryset.filter(*result)
+			self.queryset = self.queryset.filter(user=self.request.user, *result)
 		return self.queryset
 
 	@transaction.atomic

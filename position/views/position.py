@@ -11,7 +11,7 @@ from utilities.paginator import CustomPagination
 class PositionViewSet(ModelViewSet):
 	serializer_class = PositionSerializer
 	queryset = Position.objects
-	permission_classes = []#[IsAuthenticated]
+	permission_classes = [IsAuthenticated]
 	pagination_class = CustomPagination
 
 	def get_serializer_class(self):
