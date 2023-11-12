@@ -53,3 +53,8 @@ cd "C:\Program Files\PostgreSQL\YOUR_VERSION\bin"
 ./psql.exe -U YOUR_USER -f "C:\backup_database.sql"
 ```
 5. Enjoy
+
+
+### data
+
+[data](https://docs.google.com/spreadsheets/d/1KNCQ2AoHyL1KbtTVRhvKVczNhVg-S98J06Z3ABNyORI)
