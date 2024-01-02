@@ -1,35 +1,40 @@
 [
     {
         "fields": {
-            "currency": "USD"
+            "currency": "USD",
+            "user": "1"
         },
         "model": "position.money",
         "pk": "5eeb7eec-7dc5-55dd-a627-f1079c1afa3f"
     },
     {
         "fields": {
-            "currency": "COP"
+            "currency": "COP",
+            "user": "1"
         },
         "model": "position.money",
         "pk": "ba876c53-da24-5546-8f58-7e4294661680"
     },
     {
         "fields": {
-            "currency": "AUD"
+            "currency": "AUD",
+            "user": "1"
         },
         "model": "position.money",
         "pk": "ec569377-bc89-5c29-9091-2b200235a966"
     },
     {
         "fields": {
-            "currency": "DOT"
+            "currency": "DOT",
+            "user": "1"
         },
         "model": "position.money",
         "pk": "17eafc67-1431-5a91-9230-3b58854f69de"
     },
     {
         "fields": {
-            "currency": "BTC"
+            "currency": "BTC",
+            "user": "1"
         },
         "model": "position.money",
         "pk": "a8c31b0a-a70d-5f6a-aefc-3d04b55da32f"
@@ -210,9 +215,9 @@
             "is_leveraged": "False",
             "open_date": "2023-07-27",
             "order_type": "1",
-            "price": "4028.28753021216",
+            "price": "3975.49906",
             "reference": "None",
-            "volume": "0.0831941606666667"
+            "volume": "0.08429885027"
         },
         "model": "position.position",
         "pk": "cd024e82-7a4d-5093-81ca-03608f01ae62"
@@ -226,12 +231,44 @@
             "is_leveraged": "False",
             "open_date": "2023-08-11",
             "order_type": "1",
-            "price": "4041.19020535233",
+            "price": "4060.186793",
             "reference": "None",
-            "volume": "0.0413318828148148"
+            "volume": "0.04113850138"
         },
         "model": "position.position",
         "pk": "3e6d34c0-d66b-539a-b521-3a863ff326a5"
+    },
+    {
+        "fields": {
+            "asset": "c7482f5a-d26f-5fbb-8d24-8c719603e344",
+            "close_date": "nan",
+            "description": "nan",
+            "direction": "1",
+            "is_leveraged": "False",
+            "open_date": "2023-10-30",
+            "order_type": "1",
+            "price": "4130.40367",
+            "reference": "None",
+            "volume": "0.0395845087"
+        },
+        "model": "position.position",
+        "pk": "7f95c9c7-5fcf-58c6-a68f-4b82aaab258d"
+    },
+    {
+        "fields": {
+            "asset": "c7482f5a-d26f-5fbb-8d24-8c719603e344",
+            "close_date": "nan",
+            "description": "nan",
+            "direction": "1",
+            "is_leveraged": "False",
+            "open_date": "2023-11-15",
+            "order_type": "1",
+            "price": "3993.35",
+            "reference": "None",
+            "volume": "0.08388946624"
+        },
+        "model": "position.position",
+        "pk": "69eda5f4-5872-5d6c-874a-0b2c778aa377"
     },
     {
         "fields": {
@@ -312,5 +349,65 @@
         },
         "model": "position.accountmoney",
         "pk": "e9252b94-1eaa-5f18-9c1b-5381a4b0a315"
+    },
+    {
+        "fields": {
+            "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
+            "date_deposit": "2023-10-08",
+            "money": "ba876c53-da24-5546-8f58-7e4294661680",
+            "quantity": "675000.0"
+        },
+        "model": "position.accountmoney",
+        "pk": "eb3d4a9c-7d22-5b84-a669-b952eed81944"
+    },
+    {
+        "fields": {
+            "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
+            "date_deposit": "2023-10-30",
+            "money": "ba876c53-da24-5546-8f58-7e4294661680",
+            "quantity": "-675000.0"
+        },
+        "model": "position.accountmoney",
+        "pk": "4281f586-333d-5c6f-abdf-13c0c8d0aaa8"
+    },
+    {
+        "fields": {
+            "account": "5be86589-ec2e-5db8-b388-36d2920a5511",
+            "date_deposit": "2023-10-30",
+            "money": "5eeb7eec-7dc5-55dd-a627-f1079c1afa3f",
+            "quantity": "163.5"
+        },
+        "model": "position.accountmoney",
+        "pk": "b54a20f9-d891-5b8e-8783-d36838e5d8b0"
+    },
+    {
+        "fields": {
+            "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
+            "date_deposit": "2023-11-10",
+            "money": "ba876c53-da24-5546-8f58-7e4294661680",
+            "quantity": "675000.0"
+        },
+        "model": "position.accountmoney",
+        "pk": "33c3f77a-82f3-5ad4-b484-6eb20e61252e"
+    },
+    {
+        "fields": {
+            "account": "df6a75c8-67d1-5ec2-8d54-94ae46d817b3",
+            "date_deposit": "2023-11-15",
+            "money": "ba876c53-da24-5546-8f58-7e4294661680",
+            "quantity": "-1350000.0"
+        },
+        "model": "position.accountmoney",
+        "pk": "57bee122-4629-5983-9dfc-28431248a083"
+    },
+    {
+        "fields": {
+            "account": "5be86589-ec2e-5db8-b388-36d2920a5511",
+            "date_deposit": "2023-11-15",
+            "money": "5eeb7eec-7dc5-55dd-a627-f1079c1afa3f",
+            "quantity": "335.0"
+        },
+        "model": "position.accountmoney",
+        "pk": "c46bd7be-22c5-5bfe-b12e-fe45f279d250"
     }
 ]
