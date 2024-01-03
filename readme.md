@@ -58,3 +58,10 @@ cd "C:\Program Files\PostgreSQL\YOUR_VERSION\bin"
 ### data
 
 [data](https://docs.google.com/spreadsheets/d/1KNCQ2AoHyL1KbtTVRhvKVczNhVg-S98J06Z3ABNyORI)
+
+
+### TODO:
+
+
+- cuando haga un deal descontar o agregar dinero a la cuenta
+- cuando se haga un deal hay que crear otra posición con el profit que se obtuvo
